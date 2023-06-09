@@ -1,0 +1,45 @@
+#bg-general {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  z-index: -2;
+  height: 100vh;
+  width: 100vw;
+  .gradient-circle {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    filter: blur(4rem);
+    opacity: 0.55;
+    border-radius: 50%;
+    animation: rotate 8s linear infinite;
+  }
+  .circle-right {
+    top: -10rem;
+    right: -10rem;
+    background: linear-gradient(
+      90deg,
+      rgb(2, 168, 204) 0%,
+      rgba(231, 102, 133, 1) 100%
+    );
+  }
+  .circle-left {
+    bottom: -10rem;
+    left: -10rem;
+    background: linear-gradient(
+      90deg,
+      rgb(197, 207, 214) 0%,
+      rgba(231, 102, 133, 1) 100%
+    );
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

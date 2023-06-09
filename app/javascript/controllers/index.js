@@ -6,3 +6,9 @@ import { application } from "./application"
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
+
+import MagneticElementsController from "./magnetic_elements_controller"
+application.register("magnetic-elements", MagneticElementsController)
+
+import VanillaTiltController from "./vanilla_tilt_controller"
+application.register("vanilla-tilt", VanillaTiltController)

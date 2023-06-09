@@ -1,0 +1,14 @@
+<div class="nav-bar">
+  <h1>
+  <%# WHEN ON HOME PAGE, DON'T SHOW LOGO %>
+    <% if !current_page?(action: 'home') %>
+      <%= link_to 'Rolf Sommer', root_path, class: "logo" %>
+    <% end %>
+  </h1>
+
+  <ul class="main-menu" data-controller="magnetic-elements" data-action="mouseover->magnetic-elements#magnet">
+    <li magnetic-element><%= link_to "Work", work_path, class: current_class?(work_path)%></li>
+    <li magnetic-element><%= link_to "Steckbrief", steckbrief_path, class: current_class?(steckbrief_path)%></li>
+    <li magnetic-element><%= link_to "Kontakt", kontakt_path, class: current_class?(kontakt_path)%></li>
+  </ul>
+</div>
