@@ -1,0 +1,35 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  piece: MyString
+  role: MyString
+  genre: MyString
+  responsible: MyString
+  location: MyString
+  start_date: 2023-06-09
+  end_date: 2023-06-09
+  directed_by: MyString
+  musiker: MyString
+  choreo: MyString
+  url: MyString
+  comment: MyText
+  actor: false
+  director: false
+  texter: false
+
+two:
+  piece: MyString
+  role: MyString
+  genre: MyString
+  responsible: MyString
+  location: MyString
+  start_date: 2023-06-09
+  end_date: 2023-06-09
+  directed_by: MyString
+  musiker: MyString
+  choreo: MyString
+  url: MyString
+  comment: MyText
+  actor: false
+  director: false
+  texter: false

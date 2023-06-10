@@ -2,10 +2,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap");
 
 @font-face {
-  font-family: "Nyght Serif";
-  src: url("./fonts/nyghtserif-dark.ttf");
+  font-family: "Nyght Serif Dark";
+  src: url("NyghtSerif-Dark.ttf");
+}
+@font-face {
+  font-family: "Nyght Serif Light";
+  src: url("NyghtSerif-Light.ttf");
 }
 
 $headers: "Libre Caslon Text", serif;
 $body: "Lato", sans-serif;
-$logo-font: "Nyght Serif", serif;
+$logo-font-dark: "Nyght Serif Dark", serif;
+$logo-font-light: "Nyght Serif Light", serif;

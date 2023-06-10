@@ -1,0 +1,15 @@
+<div class="kommende-card">
+    <div class="title-row">
+      <p class="col-title stuck-col">Stück</p>
+      <p class="col-title spielort-col">Spielort</p>
+      <p class="col-title datum-col">Datum</p>
+    </div>
+  <%# Kommende card, STÜCK COLUMN %>
+  <% @gig.each do |g| %>
+    <ul class="gigs-row">
+      <li class="stuck-col piece-title"><%= g.piece %></li>
+      <li class="spielort-col"><%= g.location %></li>
+      <li class="datum-col"><%= g.start_date %></li>
+    </ul>
+  <% end %>
+</div>
