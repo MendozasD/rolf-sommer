@@ -1,31 +1,7 @@
-<div class="kommende-card">
-  <section class="stickers-row">
-    <div class="sticker-1 schauspieler-sticker">Schauspieler</div>
-    <div class="sticker-1 director-sticker">Regisseur</div>
-    <div class="sticker-1 texter-sticker">Texter</div>
-  </section>
-  <div class="title-row">
-    <p class="col-title stuck-col">Stück</p>
-    <p class="col-title role-col">Stück</p>
-    <p class="col-title spielort-col">Spielort</p>
-    <p class="col-title datum-col">Datum</p>
-  </div>
+<section class="box">
+  <%# KOMMENDE CARD %>
+  <%= render 'shared/kommende' %>
 
-  <% @gig.each do |g| %>
-    <% if !g.premiered %>
-      <ul class="gigs-row">
-        <%# If statement filtering stickers for perfomer's field %>
-        <% if g.actor %>
-          <li class="stuck-col piece-title schauspieler-sticker"><%= g.piece %></li>
-        <% elsif g.director %>
-          <li class="stuck-col piece-title director-sticker"><%= g.piece %></li>
-        <% else g.texter %>
-          <li class="stuck-col piece-title texter-sticker"><%= g.piece %></li>
-        <% end %>
-        <li class="role-col"><%= g.role %></li>
-        <li class="spielort-col"><%= g.location %></li>
-        <li class="datum-col"><%= g.start_date %></li>
-      </ul>
-    <% end %>
-  <% end %>
-</div>
+  <%# JOBS CARD %>
+  <%= render 'shared/jobs' %>
+</section>

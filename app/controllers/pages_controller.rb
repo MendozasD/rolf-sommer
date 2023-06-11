@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   def home
   end
   def work
-    @gig = Performer.all
+    @gig = Job.all
   end
   def steckbrief
   end

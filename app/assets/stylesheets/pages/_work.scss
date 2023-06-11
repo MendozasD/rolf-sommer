@@ -2,71 +2,7 @@
   font-family: $body;
 }
 
-.kommende-card {
+.box {
   margin: 100px auto 0 auto;
-  padding: 0;
-  width: 90%;
-  .stickers-row {
-    display: flex;
-    justify-content: flex-end;
-    .sticker-1 {
-      padding: 5px 10px 10px 10px;
-      font-size: 1.3rem;
-      font-style: italic;
-    }
-  }
-  .stuck-col {
-    width: 40%;
-  }
-  .role-col,
-  .spielort-col,
-  .datum-col {
-    width: 20%;
-    align-self: center;
-  }
-}
-
-.title-row,
-.gigs-row {
-  width: 100%;
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  align-items: baseline;
-  border-bottom: solid 1px gray;
-  .piece-title {
-    font-size: 2rem;
-  }
-  .col-title {
-    font-style: italic;
-  }
-}
-
-.gigs-row:hover {
-  background: linear-gradient(
-    90deg,
-    rgba(231, 102, 133, 0) 0%,
-    rgba(231, 102, 133, 0.5018601190476191) 50%,
-    rgba(231, 102, 133, 0) 100%
-  );
-}
-
-.schauspieler-sticker:after {
-  content: url(https://res.cloudinary.com/dm4hnoj7v/image/upload/c_scale,w_40/v1686423474/rolf_sommer/schauspieler-sticker_d13cqp.png);
-  position: relative;
-  right: 5px;
-  top: 5px;
-}
-.director-sticker:after {
-  content: url(https://res.cloudinary.com/dm4hnoj7v/image/upload/c_scale,w_40/v1686423474/rolf_sommer/director-sticker_ioscfw.png);
-  position: relative;
-  right: 5px;
-  top: 5px;
-}
-.texter-sticker:after {
-  content: url(https://res.cloudinary.com/dm4hnoj7v/image/upload/c_scale,w_40/v1686423473/rolf_sommer/texter-sticker_uuxp4k.png);
-  position: relative;
-  right: 5px;
-  top: 5px;
+  width: 95%;
 }
