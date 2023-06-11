@@ -7,7 +7,13 @@
   <%# Kommende card, STÜCK COLUMN %>
   <% @gig.each do |g| %>
     <ul class="gigs-row">
-      <li class="stuck-col piece-title"><%= g.piece %></li>
+      <% if g.actor %>
+        <li class="stuck-col piece-title schauspieler-sticker"><%= g.piece %></li>
+      <% elsif g.director %>
+        <li class="stuck-col piece-title director-sticker"><%= g.piece %></li>
+      <% else g.texter %>
+        <li class="stuck-col piece-title texter-sticker"><%= g.piece %></li>
+      <% end %>
       <li class="spielort-col"><%= g.location %></li>
       <li class="datum-col"><%= g.start_date %></li>
     </ul>
