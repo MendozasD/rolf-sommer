@@ -25,7 +25,9 @@
         <% end %>
         <li class="role-col"><%= g.role %></li>
         <li class="spielort-col"><%= g.location %></li>
-        <li class="datum-col"><%= g.start_date.strftime("%d %m %y") %></li>
+        <% if g.start_date %>
+          <li class="datum-col"><%= g.start_date.strftime("%d %m %y") %></li>
+        <% end %>
       </ul>
     <% end %>
   <% end %>

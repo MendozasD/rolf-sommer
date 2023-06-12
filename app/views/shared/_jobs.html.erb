@@ -1,6 +1,31 @@
-<section class="job-button-filter">
-  <button>Alles</button>
-  <button>Schauspieler</button>
-  <button>Regissuer</button>
-  <button>Texter</button>
-</section>
+<div class="jobs-filter" data-controller="filter">
+  <section class="job-button-filter">
+    <button data-action="click->filter#showAll">Alles</button>
+    <button data-action="click->filter#showActor">Schauspieler</button>
+    <button data-action="click->filter#showDirector">Regissuer</button>
+    <button data-action="click->filter#showTexter">Texter</button>
+  </section>
+
+  <div class="kommende-card">
+    <% @gig.each do |g| %>
+      <% if g.premiered %>
+        <ul class="gigs-row">
+          <%# If statement filtering stickers for perfomer's field %>
+          <% if g.actor %>
+            <li class="stuck-col piece-title schauspieler-sticker"><%= g.piece %></li>
+          <% elsif g.director %>
+            <li class="stuck-col piece-title director-sticker"><%= g.piece %></li>
+          <% else g.texter %>
+            <li class="stuck-col piece-title texter-sticker"><%= g.piece %></li>
+          <% end %>
+          <li class="role-col"><%= g.role %></li>
+          <li class="spielort-col"><%= g.location %></li>
+          <%# Start date shows only if date is true otherwise crashes %>
+          <% if g.start_date %>
+            <li class="datum-col"><%= g.start_date.strftime("%d %m %y") %></li>
+          <% end %>
+        </ul>
+      <% end %>
+    <% end %>
+  </div>
+</div>
