@@ -1,29 +1,52 @@
 import { Controller } from "@hotwired/stimulus";
 
-let jobList = document.querySelectorAll(".gigs-row");
+function showAll() {
+  document.getElementById("actor-row").classList.add("display-list");
+  document.getElementById("director-row").classList.add("display-list");
+  document.getElementById("texter-row").classList.add("display-list");
+}
+
+function clearAll() {
+  document.getElementById("actor-row").className = "";
+  document.getElementById("director-row").className = "";
+  document.getElementById("texter-row").className = "";
+}
+
+function hideDirector() {
+  let dd = document.getElementById("director-row");
+  dd.className = "";
+  dd.classList.add("display-list-not");
+}
+function hideTexter() {
+  let dd = document.getElementById("texter-row");
+  dd.className = "";
+  dd.classList.add("display-list-not");
+}
+function hideActor() {
+  let dd = document.getElementById("actor-row");
+  dd.className = "";
+  dd.classList.add("display-list-not");
+}
+
 export default class extends Controller {
   showAll() {
-    jobList.forEach((a) => {
-      a.classList = "";
-      a.classList.add("gigs-row", "show-in-jobs");
-    });
+    clearAll();
+    showAll();
   }
   showActor() {
-    jobList.forEach((a) => {
-      a.classList = "";
-      a.classList.add("gigs-row", "show-only-actor");
-    });
+    document.getElementById("actor-row").classList.add("display-list");
+    hideDirector();
+    hideTexter();
   }
+
   showDirector() {
-    jobList.forEach((a) => {
-      a.classList = "";
-      a.classList.add("gigs-row", "show-only-director");
-    });
+    document.getElementById("director-row").classList.add("display-list");
+    hideActor();
+    hideTexter();
   }
   showTexter() {
-    jobList.forEach((a) => {
-      a.classList = "";
-      a.classList.add("gigs-row", "show-only-texter");
-    });
+    document.getElementById("texter-row").classList.add("display-list");
+    hideActor();
+    hideDirector();
   }
 }

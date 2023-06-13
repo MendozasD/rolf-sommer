@@ -7,25 +7,14 @@
   </section>
 
   <div class="kommende-card">
-    <% @gig.each do |g| %>
-      <% if g.premiered %>
-        <ul class="gigs-row">
-          <%# If statement filtering stickers for perfomer's field %>
-          <% if g.actor %>
-            <li class="stuck-col piece-title schauspieler-sticker"><%= g.piece %></li>
-          <% elsif g.director %>
-            <li class="stuck-col piece-title director-sticker"><%= g.piece %></li>
-          <% else g.texter %>
-            <li class="stuck-col piece-title texter-sticker"><%= g.piece %></li>
-          <% end %>
-          <li class="role-col"><%= g.role %></li>
-          <li class="spielort-col"><%= g.location %></li>
-          <%# Start date shows only if date is true otherwise crashes %>
-          <% if g.start_date %>
-            <li class="datum-col"><%= g.start_date.strftime("%d %m %y") %></li>
-          <% end %>
-        </ul>
-      <% end %>
-    <% end %>
+    <div id="actor-row">
+      <%= render 'shared/actor-list' %>
+    </div>
+    <div id="director-row">
+      <%= render 'shared/director-list' %>
+    </div>
+    <div id="texter-row">
+      <%= render 'shared/texter-list' %>
+    </div>
   </div>
 </div>
