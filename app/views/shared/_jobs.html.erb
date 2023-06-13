@@ -1,12 +1,19 @@
 <div class="jobs-filter" data-controller="filter">
   <section class="job-button-filter">
-    <button data-action="click->filter#showAll">Alles</button>
-    <button data-action="click->filter#showActor">Schauspieler</button>
-    <button data-action="click->filter#showDirector">Regissuer</button>
-    <button data-action="click->filter#showTexter">Texter</button>
+    <button id="btn-all" class="btn-border-active" data-action="click->filter#showAll">Alles</button>
+    <button id="btn-actor" data-action="click->filter#showActor">Schauspieler</button>
+    <button id="btn-director" data-action="click->filter#showDirector">Regissuer</button>
+    <button id="btn-texter" data-action="click->filter#showTexter">Texter</button>
   </section>
 
   <div class="kommende-card">
+    <div class="title-row">
+      <p class="col-title stuck-col">Stück</p>
+      <p class="col-title role-col">Role</p>
+      <p class="col-title spielort-col">Spielort</p>
+      <p class="col-title datum-col">Premiere</p>
+    </div>
+
     <div id="actor-row">
       <%= render 'shared/actor-list' %>
     </div>

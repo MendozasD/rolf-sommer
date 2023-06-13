@@ -1,0 +1,46 @@
+.info-cards-container {
+  display: grid;
+  justify-content: center;
+  .info-box {
+    border: solid 0.5px $blue;
+    padding: 1rem;
+    border-radius: 40px;
+    width: 70vw;
+    h1 {
+      font-size: 3.5rem;
+      padding: 0 4rem;
+      text-align: center;
+      font-family: $logo-font-light;
+      border-bottom: solid 0.5px $blue;
+    }
+    .angaben-cols {
+      display: flex;
+      padding: 20px 60px;
+      column-gap: 50px;
+      .angaben-col-left,
+      .angaben-col-right {
+        width: 50%;
+        .angaben-section {
+          margin-bottom: 15px;
+          .title-steckbrief {
+            font-weight: bolder;
+          }
+        }
+      }
+      .angaben-col-left {
+        text-align: right;
+      }
+      p {
+        margin: 0;
+      }
+    }
+  }
+  .info-box-top {
+    &::before {
+      content: "";
+      position: relative;
+      border-left: solid 2px red;
+      left: 50%;
+    }
+  }
+}
