@@ -1,0 +1,27 @@
+<div class="box">
+  <section class="kontakt-container">
+    <div class="kontakt-pic-box">
+      <%= cl_image_tag("rolf_sommer/kontakt-page_bvrrzx", class: 'kontakt-foto') %>
+    </div>
+    <div class="kontakt-link-box">
+      <div class="main-link-box-container">
+        <div class="link-box-top">
+          <%= mail_to 'info@rolfsommer.net', class: 'link-1 main-link-top'%>
+          <div class="flex-link">
+            <%= mail_to 'https://www.facebook.com/rolf.sommer.94', 'Facebook', class: 'link-1'%>
+            <%= mail_to 'https://www.instagram.com/rolf_sommer_/', 'Instagram', class: 'link-1'%>
+          </div>
+        </div>
+        <div class="link-box-bottom">
+          <%= link_to 'http://davidmendoza.ch/', target: "_blank" do %>
+            <p class="link-1 profi-link"><span class="profi-tag">Web Design</span> :: David Mendoza</p>
+          <% end %>
+          <%= link_to 'https://jontrachsel.ch/', target: "_blank" do %>
+            <p class="link-1 profi-link"><span class="profi-tag">Fotograf</span> :: Jon Trachsel</p>
+          <% end %>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+</div>

@@ -2,10 +2,12 @@
   display: grid;
   justify-content: center;
   .info-box {
+    position: relative;
     border: solid 0.5px $blue;
     padding: 1rem;
     border-radius: 40px;
     width: 70vw;
+    margin-bottom: 20px;
     h1 {
       font-size: 3.5rem;
       padding: 0 4rem;
@@ -34,13 +36,24 @@
         margin: 0;
       }
     }
+    .sun-icon-steckbrief {
+      position: absolute;
+      width: 80px;
+      overflow: hidden;
+      bottom: 10px;
+    }
+    .right-sun-icon {
+      right: 10px;
+    }
   }
   .info-box-top {
     &::before {
       content: "";
-      position: relative;
-      border-left: solid 2px red;
+      position: absolute;
+      border-left: solid 0.5px $blue;
       left: 50%;
+      top: 20%;
+      height: 422px;
     }
   }
 }
