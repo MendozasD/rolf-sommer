@@ -4,6 +4,9 @@
 
 import { application } from "./application"
 
+import BorderController from "./border_controller"
+application.register("border", BorderController)
+
 import FilterController from "./filter_controller"
 application.register("filter", FilterController)
 

@@ -7,10 +7,12 @@
     margin: 0 5px;
     background-color: transparent;
     border-radius: 30px;
-    border: transparent;
   }
   .btn-border-active {
     border: solid $blue 0.5px;
+  }
+  .btn-border-off {
+    border: none;
   }
 }
 

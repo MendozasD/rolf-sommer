@@ -1,9 +1,9 @@
-<div class="jobs-filter" data-controller="filter">
+<div class="jobs-filter" data-controller="filter border">
   <section class="job-button-filter">
-    <button id="btn-all" class="btn-border-active" data-action="click->filter#showAll">Alles</button>
-    <button id="btn-actor" data-action="click->filter#showActor">Schauspieler</button>
-    <button id="btn-director" data-action="click->filter#showDirector">Regissuer</button>
-    <button id="btn-texter" data-action="click->filter#showTexter">Texter</button>
+    <button id="btn-all" class="btn-border-off" data-action="click->filter#showAll click->border#all" data-border-target="button">Alles</button>
+    <button id="btn-actor" class="btn-border-off" data-action="click->filter#showActor click->border#actor" data-border-target="button">Schauspieler</button>
+    <button id="btn-director" class="btn-border-off" data-action="click->filter#showDirector click->border#director" data-border-target="button">Regissuer</button>
+    <button id="btn-texter" class="btn-border-off" data-action="click->filter#showTexter click->border#texter" data-border-target="button">Texter</button>
   </section>
 
   <div class="kommende-card">

@@ -6,9 +6,11 @@ export default class extends Controller {
   magnet() {
     const magneticElementsController = new MagneticElementsController({
       standalone: false,
-      triggerArea: 25,
+      triggerArea: 100,
       interpolationFactor: 0.5,
-      magneticForce: 0.5,
+      magneticForce: 0.1,
     });
+    this.element.classList.add("active");
+    console.log("dreamer");
   }
 }

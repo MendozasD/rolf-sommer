@@ -6,9 +6,9 @@
     <% end %>
   </h1>
 
-  <ul class="main-menu" data-controller="magnetic-elements" data-action="mouseover->magnetic-elements#magnet">
-    <li magnetic-element><%= link_to "Work", work_path, class: current_class?(work_path)%></li>
-    <li magnetic-element><%= link_to "Steckbrief", steckbrief_path, class: current_class?(steckbrief_path)%></li>
-    <li magnetic-element><%= link_to "Kontakt", kontakt_path, class: current_class?(kontakt_path)%></li>
+  <ul class="main-menu" data-controller="magnetic-elements">
+    <li magnetic-element data-action="mouseover->magnetic-elements#magnet"><%= link_to "Work", work_path, class: current_class?(work_path)%></li>
+    <li magnetic-element data-action="mouseover->magnetic-elements#magnet"><%= link_to "Steckbrief", steckbrief_path, class: current_class?(steckbrief_path)%></li>
+    <li magnetic-element data-action="mouseover->magnetic-elements#magnet"><%= link_to "Kontakt", kontakt_path, class: current_class?(kontakt_path)%></li>
   </ul>
 </div>
