@@ -8,4 +8,7 @@ class PagesController < ApplicationController
   end
   def kontakt
   end
+  def show
+    @gig = Job.find(params[:id])
+  end
 end

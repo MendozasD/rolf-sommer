@@ -6,9 +6,15 @@
     <% end %>
   </h1>
 
-  <ul class="main-menu" data-controller="magnetic-elements">
-    <li magnetic-element data-action="mouseover->magnetic-elements#magnet"><%= link_to "Work", work_path, class: current_class?(work_path)%></li>
-    <li magnetic-element data-action="mouseover->magnetic-elements#magnet"><%= link_to "Steckbrief", steckbrief_path, class: current_class?(steckbrief_path)%></li>
-    <li magnetic-element data-action="mouseover->magnetic-elements#magnet"><%= link_to "Kontakt", kontakt_path, class: current_class?(kontakt_path)%></li>
-  </ul>
+  <div class="main-menu" data-controller="magnetic-elements">
+    <%= link_to work_path, class: current_class?(work_path) do %>
+      <button magnetic-element data-action="mouseover->magnetic-elements#magnet">Work</button>
+    <% end %>
+    <%= link_to steckbrief_path, class: current_class?(steckbrief_path) do %>
+      <button magnetic-element data-action="mouseover->magnetic-elements#magnet">Steckbrief</button>
+    <% end %>
+    <%= link_to kontakt_path, class: current_class?(kontakt_path) do %>
+      <button magnetic-element data-action="mouseover->magnetic-elements#magnet">Kontakt</button>
+    <% end %>
+  </div>
 </div>
