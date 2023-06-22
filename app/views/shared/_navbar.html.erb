@@ -1,10 +1,13 @@
 <div class="nav-bar">
-  <h1>
-  <%# WHEN ON HOME PAGE, DON'T SHOW LOGO %>
-    <% if !current_page?(action: 'home') %>
-      <%= link_to 'Rolf Sommer', root_path, class: "logo" %>
-    <% end %>
-  </h1>
+  <%# WHEN ON HOME PAGE, DON'T SHOW LOGO-LETTERS %>
+  <% if !current_page?(action: 'home') %>
+    <%= link_to 'Rolf Sommer', root_path, class: "logo-letters" %>
+  <% end %>
+
+  <%# SUN LOGO %>
+  <%= link_to root_path do %>
+    <%= cl_image_tag("https://res.cloudinary.com/dm4hnoj7v/image/upload/c_scale,w_50/v1686929728/rolf_sommer/sun_icon_qzn60f.png", class: "sun-logo")%>
+  <% end %>
 
   <div class="main-menu" data-controller="magnetic-elements">
     <%= link_to work_path, class: current_class?(work_path) do %>

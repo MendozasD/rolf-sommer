@@ -2,13 +2,13 @@
   font-family: $body;
 }
 
-.box {
-  margin: 100px auto 0 auto;
-  width: 95%;
+body {
+  display: flex;
+  justify-content: center;
 }
 
-@media (max-width: 800px) {
-  .box {
-    margin: 0 auto;
-  }
+.box {
+  position: absolute;
+  margin: 100px auto 0 auto;
+  width: 95%;
 }

@@ -1,3 +1,9 @@
-.modal-job {
-  border: solid 5px $blue;
+#modal {
+  position: fixed;
+  z-index: 6;
+  top: 50%;
+  width: 400px;
+  word-break: break-word;
+  border-radius: 6px;
+  background: #bad5ff;
 }

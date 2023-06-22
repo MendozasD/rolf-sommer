@@ -11,6 +11,5 @@ export default class extends Controller {
       magneticForce: 0.1,
     });
     this.element.classList.add("active");
-    console.log("dreamer");
   }
 }

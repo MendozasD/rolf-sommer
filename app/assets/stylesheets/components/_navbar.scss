@@ -1,5 +1,5 @@
 .nav-bar {
-  position: absolute;
+  position: fixed;
   display: flex;
   justify-content: space-between;
   top: 0;
@@ -9,18 +9,27 @@
   z-index: 5;
   padding: 20px;
   align-items: baseline;
-  h1 {
+  background: linear-gradient(
+    180deg,
+    rgba(231, 102, 133, 0.4010197829131653) 0%,
+    rgba(231, 102, 133, 0) 66%,
+    rgba(231, 102, 133, 0) 100%
+  );
+  .logo-letters {
     text-align: center;
     margin: 0;
-    .logo {
-      font-family: $logo-font-dark;
-      color: $blue;
-      font-weight: 400;
-      letter-spacing: -3px;
-      text-decoration: none;
-      white-space: nowrap;
-      font-size: 3rem;
-    }
+    font-family: $logo-font-dark;
+    color: $blue;
+    font-weight: 400;
+    letter-spacing: -3px;
+    text-decoration: none;
+    white-space: nowrap;
+    font-size: 3rem;
+  }
+  .sun-logo {
+    display: block;
+    align-self: center;
+    animation: rotate 12s linear infinite;
   }
   .main-menu {
     display: flex;
@@ -43,21 +52,31 @@
       }
     }
     .active {
-      background-color: $orange;
+      background-color: $rosa;
       border-radius: 30px;
+      button {
+        font-style: italic;
+      }
     }
   }
 }
 
 @media (max-width: 800px) {
   .nav-bar {
-    display: block;
-    position: sticky;
+    .logo-letters {
+      display: none;
+    }
+    .sun-logo {
+      display: block;
+    }
     .main-menu {
       justify-content: center;
-      h2 {
-        a {
-          letter-spacing: 1px;
+      a {
+        letter-spacing: 1px;
+        button {
+          padding: 2px 10px;
+          margin: 2px;
+          font-size: 1rem;
         }
       }
     }
