@@ -1,9 +1,16 @@
 <% if current_page?(action: 'work') %>
-  <section id="vertical-btn">
-    <section class="stickers-row">
-      <div class="sticker-1 schauspieler-sticker">Schauspieler</div>
-      <div class="sticker-1 director-sticker">Regisseur</div>
-      <div class="sticker-1 texter-sticker">Texter</div>
-    </section>
+  <section class="stickers-row">
+    <div class="sticker-1">
+      <div class="schauspieler-sticker">Schauspieler</div>
+      <%= cl_image_tag("https://res.cloudinary.com/dm4hnoj7v/image/upload/c_scale,w_20/v1686423474/rolf_sommer/schauspieler-sticker_d13cqp.png") %>
+    </div>
+    <div class="sticker-1">
+      <div class="director-sticker">Regisseur</div>
+      <%= cl_image_tag("https://res.cloudinary.com/dm4hnoj7v/image/upload/c_scale,w_20/v1686423474/rolf_sommer/director-sticker_ioscfw.png") %>
+    </div>
+    <div class="sticker-1">
+      <div class="texter-sticker">Texter</div>
+      <%= cl_image_tag("https://res.cloudinary.com/dm4hnoj7v/image/upload/c_scale,w_20/v1686423473/rolf_sommer/texter-sticker_uuxp4k.png") %>
+    </div>
   </section>
 <% end %>
