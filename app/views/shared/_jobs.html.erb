@@ -11,17 +11,9 @@
       <p class="col-title stuck-col">Stück</p>
       <p class="col-title role-col">Role</p>
       <p class="col-title spielort-col">Spielort</p>
-      <p class="col-title datum-col">Premiere</p>
+      <p class="col-title datum-col">Date</p>
     </div>
-
-    <div id="actor-row">
-      <%= render 'shared/actor-list' %>
-    </div>
-    <div id="director-row">
-      <%= render 'shared/director-list' %>
-    </div>
-    <div id="texter-row">
-      <%= render 'shared/texter-list' %>
-    </div>
+    <%# Rendering the list of gigs with their filtering buttons %>
+    <%= render 'shared/gigs-list' %>
   </div>
 </div>

@@ -28,3 +28,15 @@
 .jobs-card {
   margin-bottom: 50px;
 }
+
+@media (max-width: 800px) {
+  .job-button-filter {
+    padding: 0;
+    button {
+      padding: 15px 20px;
+      margin: 0 5px;
+      background-color: transparent;
+      border-radius: 30px;
+    }
+  }
+}

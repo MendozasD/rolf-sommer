@@ -17,10 +17,10 @@
         <% else g.texter %>
           <li class="stuck-col piece-title texter-sticker"><%= g.piece %></li>
         <% end %>
-        <li class="role-col"><%= g.role %></li>
-        <li class="spielort-col"><%= g.location %></li>
+        <li class="gig-col role-col"><%= g.role %></li>
+        <li class="gig-col spielort-col"><%= g.location %></li>
         <% if g.start_date %>
-          <li class="datum-col"><%= g.start_date.strftime("%d %m %y") %></li>
+          <li class="gig-col datum-col"><%= g.start_date.strftime("%b. %d, %Y") %></li>
         <% end %>
       </ul>
     <% end %>

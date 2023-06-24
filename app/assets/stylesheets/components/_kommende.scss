@@ -2,10 +2,38 @@
   margin: 0 auto;
   padding: 40px;
   width: 90%;
-  border: solid $blue 0.5px;
-  border-radius: 10px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.36);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: $blue;
+  #date-small {
+    font-size: 0.7rem;
+    font-style: italic;
+    font-family: $logo-font-light;
+  }
+  #date-kommende {
+    position: absolute;
+    right: 0;
+    white-space: nowrap;
+    inline-size: fit-content;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 1rem;
+    rotate: 11deg;
+    background: none;
+    border: solid 0.5px $blue;
+    background-color: $rosa;
+    color: $white;
+  }
+  a {
+    text-decoration: none;
+  }
   .stuck-col {
     width: 50%;
+    font-weight: 400;
   }
   .role-col,
   .spielort-col {
@@ -14,6 +42,9 @@
   }
   .datum-col {
     width: 10%;
+  }
+  .gig-col {
+    align-self: center;
   }
 }
 
@@ -27,7 +58,7 @@
   align-items: baseline;
   border-bottom: solid 0.5px gray;
   .piece-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .col-title {
     font-style: italic;
@@ -41,4 +72,33 @@
     rgba(231, 102, 133, 0.5018601190476191) 50%,
     rgba(231, 102, 133, 0) 100%
   );
+}
+
+// *********************************************
+
+@media (max-width: 800px) {
+  .kommende-card {
+    padding: 10px 15px;
+    width: 98%;
+    font-weight: 300;
+    .title-row {
+      display: none;
+    }
+    .gigs-row {
+      flex-wrap: wrap;
+      padding: 12px 0;
+      .stuck-col {
+        width: 100%;
+        font-size: 1.5rem;
+      }
+      .role-col,
+      .spielort-col {
+        width: 50%;
+        font-size: 1rem;
+      }
+      .datum-col {
+        display: none;
+      }
+    }
+  }
 }

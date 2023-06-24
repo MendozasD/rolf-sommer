@@ -7,14 +7,15 @@
   width: 100%;
   user-select: none;
   z-index: 5;
-  padding: 20px;
+  padding: 0 20px;
   align-items: baseline;
-  background: linear-gradient(
-    180deg,
-    rgba(231, 102, 133, 0.4010197829131653) 0%,
-    rgba(231, 102, 133, 0) 66%,
-    rgba(231, 102, 133, 0) 100%
-  );
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.52);
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.7px);
+  -webkit-backdrop-filter: blur(8.7px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
   .logo-letters {
     text-align: center;
     margin: 0;
