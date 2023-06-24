@@ -57,3 +57,26 @@
     }
   }
 }
+
+@media (max-width: 800px) {
+  .info-cards-container {
+    .info-box {
+      width: 95vw;
+      h1 {
+        font-size: 2.5rem;
+      }
+      .sun-icon-steckbrief {
+        width: 50px;
+      }
+      .angaben-cols {
+        padding: 0;
+        column-gap: 20px;
+        font-size: 0.9rem;
+        .steckbrief-bullet {
+          border-bottom: dashed 0.5px $blue;
+          margin-bottom: 2px;
+        }
+      }
+    }
+  }
+}
