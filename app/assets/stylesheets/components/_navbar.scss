@@ -8,8 +8,9 @@
   user-select: none;
   z-index: 5;
   padding: 0 20px;
-  align-items: baseline;
-  /* From https://css.glass */
+  align-items: center;
+  height: 70px;
+  /* GLASS BACKGROUND */
   background: rgba(255, 255, 255, 0.52);
   border-radius: 0 0 16px 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -45,7 +46,7 @@
       font-weight: 300;
       margin: 0 0.5rem;
       padding: 10px 15px;
-      border: solid $blue 0.5px;
+      border: solid 0.5px;
       border-radius: 30px;
       background: none;
       a {

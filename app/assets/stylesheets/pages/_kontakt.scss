@@ -1,26 +1,87 @@
 .kontakt-container {
-  display: flex;
-  align-items: flex-end;
-  #kontack-foto {
-    height: 85vh;
-    border-radius: 50px;
+  #kontakt-description {
+    padding: 50px 50px 10px 50px;
+    font-size: 1.2rem;
+    p {
+      border: solid 0.5px black;
+      border-radius: 20px;
+      padding: 20px 30px;
+      &::first-letter {
+        font-family: $logo-font-light;
+        initial-letter: 2;
+      }
+    }
   }
-  #kontakt-link-box {
+  .kontakt-divider {
     display: flex;
+    padding: 3rem;
+    #kontakt-foto-container {
+      width: 50%;
+      text-align: end;
+      #kontack-foto {
+        height: 80vh;
+        border-radius: 20px;
+      }
+    }
+    #kontakt-link-box {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      text-align: left;
+      margin-left: 50px;
+      .link-1 {
+        font-family: $logo-font-light;
+        text-decoration: none;
+        font-size: 1.5rem;
+        width: fit-content;
+        padding: 10px 40px;
+        border: solid $blue 0.5px;
+        border-radius: 40px;
+        margin: 10px 0;
+        color: black;
+        &:hover {
+          background-color: $rosa;
+          color: $white;
+          border: solid $rosa 0.5px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .kontakt-container {
     flex-direction: column;
-    width: 80%;
-    text-align: left;
-    margin-left: 50px;
-    .link-1 {
-      text-decoration: none;
-      font-size: 2rem;
-      width: fit-content;
-      padding: 10px 20px;
-      border: solid $blue 0.5px;
-      border-radius: 40px;
-      margin: 10px 0;
-      &:hover {
-        text-decoration: underline solid 2px;
+    align-items: center;
+    #kontakt-description {
+      padding: 25px 25px 0 25px;
+      font-size: 1rem;
+    }
+
+    .kontakt-divider {
+      flex-direction: column-reverse;
+      align-items: center;
+      padding: 1rem;
+
+      #kontakt-foto-container {
+        text-align: center;
+        width: 95%;
+        #kontack-foto {
+          margin-top: 20px;
+          width: 100%;
+          height: auto;
+        }
+      }
+      #kontakt-link-box {
+        width: 95%;
+        margin-left: 0;
+        align-items: center;
+        .link-1 {
+          margin: 10px 0;
+          font-size: 1.5rem;
+          width: 100%;
+          text-align: center;
+        }
       }
     }
   }

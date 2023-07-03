@@ -1,12 +1,19 @@
 <div class="box">
   <section class="kontakt-container">
-    <%= cl_image_tag("rolf_sommer/kontakt-page_bvrrzx", id: 'kontack-foto', class: 'kontakt-pic-box') %>
-    <div id="kontakt-link-box">
-      <%= mail_to 'info@rolfsommer.net', id:'link-box-top', class: 'link-1 main-link-top'%>
-      <%= link_to 'Facebook', 'https://www.facebook.com/rolf.sommer.94', class: 'link-1', target: '_blank'%>
-      <%= link_to 'Instagram', 'https://www.instagram.com/rolf_sommer_/', class: 'link-1', target: '_blank'%>
-      <%= link_to 'Web Design :: David Mendoza', 'http://davidmendoza.ch/', class: 'link-1', target: '_blank'%>
-      <%= link_to 'Fotograf :: Jon Trachsel', 'https://jontrachsel.ch/', class: 'link-1', target: '_blank'%>
+    <div id="kontakt-description">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut nunc sed massa pulvinar egestas. Aliquam imperdiet venenatis cursus. Etiam metus neque, mollis at dolor non, convallis pharetra velit. Nulla ut augue eros. Proin laoreet felis nec tincidunt pretium. Etiam cursus massa et magna sodales tincidunt. Suspendisse pellentesque nulla eu efficitur accumsan. </p>
+    </div>
+    <div class="kontakt-divider">
+      <div id="kontakt-foto-container">
+        <%= cl_image_tag("rolf_sommer/kontakt-page_bvrrzx", id: 'kontack-foto', class: 'kontakt-pic-box') %>
+      </div>
+      <div id="kontakt-link-box">
+        <%= mail_to 'info@rolfsommer.net', id:'link-box-top', class: 'link-1 main-link-top'%>
+        <%= link_to 'Facebook', 'https://www.facebook.com/rolf.sommer.94', class: 'link-1', target: '_blank'%>
+        <%= link_to 'Instagram', 'https://www.instagram.com/rolf_sommer_/', class: 'link-1', target: '_blank'%>
+        <%= link_to 'Web Design :: David Mendoza', 'http://davidmendoza.ch/', class: 'link-1', target: '_blank'%>
+        <%= link_to 'Fotograf :: Jon Trachsel', 'https://jontrachsel.ch/', class: 'link-1', target: '_blank'%>
+      </div>
     </div>
   </section>
 </div>
