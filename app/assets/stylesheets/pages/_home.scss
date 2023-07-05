@@ -41,6 +41,7 @@
       font-family: $logo-font-light;
     }
     p {
+      font-family: $logo-font-light;
       font-weight: bolder;
       margin: 0;
     }
@@ -57,7 +58,7 @@
     .text-box-home {
       .main-title {
         font-size: 3rem;
-        bottom: 0;
+        bottom: 10px;
       }
     }
   }

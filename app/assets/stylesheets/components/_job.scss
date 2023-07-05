@@ -1,6 +1,6 @@
 .job-button-filter {
   margin: 0 auto;
-  padding: 40px;
+  padding: 20px 40px;
   width: 90%;
   button {
     padding: 15px 20px;
@@ -9,10 +9,12 @@
     border-radius: 30px;
   }
   .btn-border-active {
-    border: solid $blue 0.5px;
+    color: white;
+    border: solid $rosa 1px;
+    background-color: $rosa;
   }
   .btn-border-off {
-    border: none;
+    border: solid $blue 0.5px;
   }
 }
 
@@ -31,11 +33,15 @@
 
 @media (max-width: 800px) {
   .job-button-filter {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
     padding: 0;
+    width: 100%;
     button {
-      padding: 15px 20px;
-      margin: 0 5px;
-      background-color: transparent;
+      font-size: 0.8rem;
+      padding: 10px 15px;
+      margin: 10px 2px;
       border-radius: 30px;
     }
   }

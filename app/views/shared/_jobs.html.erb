@@ -1,4 +1,5 @@
 <div class="jobs-filter" data-controller="filter border">
+<h1 class="title-work">Previous Shows</h1>
   <section class="job-button-filter">
     <button id="btn-all" class="btn-border-off" data-action="click->filter#showAll click->border#all" data-border-target="button">Alles</button>
     <button id="btn-actor" class="btn-border-off" data-action="click->filter#showActor click->border#actor" data-border-target="button">Schauspieler</button>
@@ -9,9 +10,9 @@
   <div class="kommende-card jobs-card">
     <div class="title-row">
       <p class="col-title stuck-col">Stück</p>
+      <p class="col-title datum-col">Datum</p>
       <p class="col-title role-col">Role</p>
       <p class="col-title spielort-col">Spielort</p>
-      <p class="col-title datum-col">Date</p>
     </div>
     <%# Rendering the list of gigs with their filtering buttons %>
     <%= render 'shared/gigs-list' %>

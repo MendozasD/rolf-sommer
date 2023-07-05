@@ -2,13 +2,10 @@
   <% @gig.where(actor: true, premiered: true).each do |g| %>
     <%= link_to show_path(g.id), data: { turbo_frame: "modal" }, class: 'modal-1' do %>
       <ul class="gigs-row">
-        <li class="stuck-col piece-title schauspieler-sticker"><%= g.piece %> <span id="date-small"><%= g.start_date.strftime("%Y") %></span></li>
+        <li class="stuck-col piece-title schauspieler-sticker"><%= g.piece %></li>
+        <span class="datum-col"><%= g.start_date.strftime("%Y") %></span>
         <li class="gig-col role-col"><%= g.role %></li>
         <li class="gig-col spielort-col"><%= g.location %></li>
-        <%# Start date shows only if date is true otherwise crashes %>
-        <% if g.start_date %>
-          <li class="gig-col datum-col"><%= g.start_date.strftime("%d.%m") %></li>
-        <% end %>
       </ul>
     <% end %>
   <% end %>
@@ -17,13 +14,10 @@
 <div id="director-row">
   <% @gig.where(director: true, premiered: true).each do |g| %>
     <ul class="gigs-row">
-      <li class="stuck-col piece-title director-sticker"><%= g.piece %> <span id="date-small"><%= g.start_date.strftime("%Y") %></span></li>
+      <li class="stuck-col piece-title director-sticker"><%= g.piece %></li>
+      <span class="datum-col"><%= g.start_date.strftime("%Y") %></span>
       <li class="gig-col role-col"><%= g.role %></li>
       <li class="gig-col spielort-col"><%= g.location %></li>
-      <%# Start date shows only if date is true otherwise crashes %>
-      <% if g.start_date %>
-        <li class="gig-col datum-col"><%= g.start_date.strftime("%d.%m") %></li>
-      <% end %>
     </ul>
   <% end %>
 </div>
@@ -31,13 +25,10 @@
 <div id="texter-row">
   <% @gig.where(texter: true, premiered: true).each do |g| %>
     <ul class="gigs-row">
-      <li class="stuck-col piece-title texter-sticker"><%= g.piece %> <span id="date-small"><%= g.start_date.strftime("%Y") %></span></li>
+      <li class="stuck-col piece-title texter-sticker"><%= g.piece %></li>
+      <span class="datum-col"><%= g.start_date.strftime("%Y") %></span>
       <li class="gig-col role-col"><%= g.role %></li>
       <li class="gig-col spielort-col"><%= g.location %></li>
-      <%# Start date shows only if date is true otherwise crashes %>
-      <% if g.start_date %>
-        <li class="gig-col datum-col"><%= g.start_date.strftime("%y") %></li>
-      <% end %>
     </ul>
   <% end %>
 </div>

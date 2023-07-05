@@ -3,20 +3,12 @@
   display: flex;
   justify-content: space-between;
   top: 0;
-  left: 0;
   width: 100%;
   user-select: none;
   z-index: 5;
   padding: 0 20px;
   align-items: center;
   height: 70px;
-  /* GLASS BACKGROUND */
-  background: rgba(255, 255, 255, 0.52);
-  border-radius: 0 0 16px 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(8.7px);
-  -webkit-backdrop-filter: blur(8.7px);
-  border: 1px solid rgba(255, 255, 255, 0.16);
   .logo-letters {
     text-align: center;
     margin: 0;
@@ -61,6 +53,16 @@
       }
     }
   }
+}
+
+.scrolled {
+  /* GLASS BACKGROUND */
+  background: rgba(255, 255, 255, 0.52);
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.7px);
+  -webkit-backdrop-filter: blur(8.7px);
+  transition: all ease 1s;
 }
 
 @media (max-width: 800px) {
