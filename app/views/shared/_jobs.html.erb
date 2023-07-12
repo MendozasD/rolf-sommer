@@ -7,12 +7,12 @@
     <button id="btn-texter" class="btn-border-off" data-action="click->filter#showTexter click->border#texter" data-border-target="button">Texter</button>
   </section>
 
-  <div class="kommende-card jobs-card">
-    <div class="title-row">
-      <p class="col-title stuck-col">Stück</p>
-      <p class="col-title role-col">Role</p>
-      <p class="col-title spielort-col">Spielort</p>
-      <p class="col-title datum-col">Datum</p>
+  <div class="kommende-card">
+    <div id="title-row-jobs">
+      <p id="fifty-width-col" class="title-field-jobs stuck-col-jobs">Stück</p>
+      <p class="title-field-jobs role-col-jobs">Role</p>
+      <p class="title-field-jobs spielort-col-jobs">Spielort</p>
+      <p class="title-field-jobs datum-col-jobs">Datum</p>
     </div>
     <%# Rendering the list of gigs with their filtering buttons %>
     <%= render 'shared/gigs-list' %>
