@@ -1,0 +1,50 @@
+.listing-jobs {
+  width: 100%;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 5px 0;
+  align-items: baseline;
+  border-bottom: solid 0.3px gray;
+}
+
+.datum-col-mobile {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .listing-jobs {
+    flex-wrap: wrap;
+    padding: 12px 0;
+    .stuck-col {
+      width: 100%;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+    .role-col,
+    .spielort-col {
+      width: 100%;
+    }
+    .role-col {
+      &::before {
+        content: "Role:  ";
+      }
+    }
+    .spielort-col {
+      &::before {
+        content: "Spielort:  ";
+      }
+    }
+    .datum-col {
+      margin: 0 auto;
+      width: fit-content;
+      padding: 0 10px;
+      text-align: center;
+      border: solid 0.5px $blue;
+      border-radius: 20px;
+    }
+  }
+  .datum-col-noshow {
+    display: none;
+  }
+}

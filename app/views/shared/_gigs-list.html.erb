@@ -1,11 +1,12 @@
 <div id="actor-row">
   <% @gig.where(actor: true, premiered: true).each do |g| %>
     <%= link_to show_path(g.id), data: { turbo_frame: "modal" }, class: 'modal-1' do %>
-      <ul class="gigs-row">
+      <ul class="listing-jobs">
         <li class="stuck-col piece-title schauspieler-sticker"><%= g.piece %></li>
-        <span class="datum-col"><%= g.start_date.strftime("%Y") %></span>
+        <span class="datum-col datum-col-mobile"><%= g.start_date.strftime("%Y") %></span>
         <li class="gig-col role-col"><%= g.role %></li>
         <li class="gig-col spielort-col"><%= g.location %></li>
+        <span class="datum-col datum-col-noshow"><%= g.start_date.strftime("%Y") %></span>
       </ul>
     <% end %>
   <% end %>
@@ -13,22 +14,24 @@
 
 <div id="director-row">
   <% @gig.where(director: true, premiered: true).each do |g| %>
-    <ul class="gigs-row">
+    <ul class="listing-jobs">
       <li class="stuck-col piece-title director-sticker"><%= g.piece %></li>
-      <span class="datum-col"><%= g.start_date.strftime("%Y") %></span>
+      <span class="datum-col datum-col-mobile"><%= g.start_date.strftime("%Y") %></span>
       <li class="gig-col role-col"><%= g.role %></li>
       <li class="gig-col spielort-col"><%= g.location %></li>
+      <span class="datum-col datum-col-noshow"><%= g.start_date.strftime("%Y") %></span>
     </ul>
   <% end %>
 </div>
 
 <div id="texter-row">
   <% @gig.where(texter: true, premiered: true).each do |g| %>
-    <ul class="gigs-row">
+    <ul class="listing-jobs">
       <li class="stuck-col piece-title texter-sticker"><%= g.piece %></li>
-      <span class="datum-col"><%= g.start_date.strftime("%Y") %></span>
+      <span class="datum-col datum-col-mobile"><%= g.start_date.strftime("%Y") %></span>
       <li class="gig-col role-col"><%= g.role %></li>
       <li class="gig-col spielort-col"><%= g.location %></li>
+      <span class="datum-col datum-col-noshow"><%= g.start_date.strftime("%Y") %></span>
     </ul>
   <% end %>
 </div>

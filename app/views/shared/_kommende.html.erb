@@ -1,9 +1,8 @@
 <div class="kommende-card">
   <div class="title-row">
-    <p class="col-title stuck-col">Stück</p>
-    <p class="col-title role-col">Role</p>
-    <p class="col-title datum-col">Premiere</p>
-    <p class="col-title spielort-col">Spielort</p>
+    <p class="title-column stuck-col">Stück</p>
+    <p class="title-column datum-col">Premiere</p>
+    <p class="title-column spielort-col">Spielort</p>
   </div>
 
   <% @gig.each do |g| %>
@@ -11,15 +10,29 @@
       <ul class="gigs-row">
         <%# If statement filtering stickers for perfomer's field %>
         <% if g.actor %>
-          <li class="stuck-col piece-title schauspieler-sticker"><%= g.piece %></li>
+        <%# ACTOR FIELD %>
+          <li class="stuck-col piece-title schauspieler-sticker">
+            <%= g.piece %>
+          </li>
         <% elsif g.director %>
-          <li class="stuck-col piece-title director-sticker"><%= g.piece %></li>
+        <%# DIRECTOR FIELD %>
+          <li class="stuck-col piece-title director-sticker">
+            <%= g.piece %>
+          </li>
         <% else g.texter %>
-          <li class="stuck-col piece-title texter-sticker"><%= g.piece %></li>
+        <%# TEXTER FIELD %>
+          <li class="stuck-col piece-title texter-sticker">
+            <%= g.piece %>
+          </li>
         <% end %>
+        <%# DATE FIELD %>
         <% if g.start_date %>
-          <li class="gig-col datum-col"><%= g.start_date.strftime("%b. %d, %Y") %></li>
+          <li class="datum-col"><%= l(g.start_date, format: '%d %b. %Y') %></li>
         <% end %>
+        <%# LOCATION FIELD %>
+        <li class="spielort-col">
+          <%= g.location %>
+        </li>
       </ul>
     <% end %>
   <% end %>

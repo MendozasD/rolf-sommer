@@ -31,5 +31,9 @@ module RolfSommer
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    # The two lines bellow setup the months translations to DE.
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
+    config.i18n.default_locale = :de
   end
 end
