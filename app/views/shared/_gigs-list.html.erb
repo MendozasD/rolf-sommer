@@ -1,41 +1,38 @@
-<div id="actor-row">
-  <% @gig.where(actor: true, premiered: true).each do |g| %>
-    <%= link_to show_path(g.id), data: { turbo_frame: "modal" }, class: 'modal-1' do %>
-      <ul class="listing-jobs">
-        <li class="stuck-col-jobs schauspieler-sticker"><%= g.piece %></li>
-        <span class="datum-col-jobs datum-col-mobile"><%= g.start_date.strftime("%Y") %></span>
-        <li class="role-col-jobs jobs-same-class"><%= g.role %></li>
-        <li class="spielort-col-jobs jobs-same-class"><%= g.location %></li>
-        <li class="datum-col-jobs datum-col-noshow"><%= g.start_date.strftime("%Y") %></li>
-      </ul>
-    <% end %>
-  <% end %>
-</div>
-
-<div id="director-row">
-  <% @gig.where(director: true, premiered: true).each do |g| %>
-    <ul class="listing-jobs">
-      <li class="stuck-col-jobs schauspieler-sticker"><%= g.piece %></li>
-      <span class="datum-col-jobs datum-col-mobile"><%= g.start_date.strftime("%Y") %></span>
-      <% if g.role %>
-        <li class="role-col-jobs jobs-same-class"><%= g.role %></li>
-      <% else %>
-        <li class="role-col-jobs jobs-same-class"></li>
+<% @gig.where(premiered: true).order(start_date: :desc).each do |g| %>
+  <% if g.actor %>
+    <div id="actor-row">
+      <%= link_to show_path(g.id), data: { turbo_frame: "modal" }, class: 'listing-jobs modal-1' do %>
+        <div class="stuck-col-jobs"><%= g.piece %> <span><%= cl_image_tag(cl_img(g)) %></span></div>
+        <div class="role-col-jobs jobs-same-class"><%= g.role %></div>
+        <div class="spielort-col-jobs jobs-same-class"><%= g.location %></div>
+        <li class="datum-col-jobs jobs-same-class"><span>( </span><%= g.start_date.strftime("%Y") %><span> )</span></li>
       <% end %>
-      <li class="spielort-col-jobs jobs-same-class"><%= g.location %></li>
-      <li class="datum-col-jobs datum-col-noshow"><%= g.start_date.strftime("%Y") %></li>
-    </ul>
+    </div>
+  <% elsif g.director %>
+    <div id="director-row">
+        <ul class="listing-jobs">
+          <li class="stuck-col-jobs"><%= g.piece %> <span><%= cl_image_tag(cl_img(g)) %></span></li>
+          <% if g.role %>
+            <li class="role-col-jobs jobs-same-class"><%= g.role %></li>
+          <% end %>
+          <% if g.location %>
+            <li class="spielort-col-jobs jobs-same-class"><%= g.location %></li>
+          <% end %>
+          <li class="datum-col-jobs jobs-same-class"><span>( </span><%= g.start_date.strftime("%Y") %><span> )</span></li>
+        </ul>
+    </div>
+  <% elsif g.texter %>
+    <div id="texter-row">
+        <ul class="listing-jobs">
+          <li class="stuck-col-jobs"><%= g.piece %> <span><%= cl_image_tag(cl_img(g)) %></span></li>
+          <% if g.role %>
+            <li class="role-col-jobs jobs-same-class"><%= g.role %></li>
+          <% end %>
+          <% if g.location %>
+            <li class="spielort-col-jobs jobs-same-class"><%= g.location %></li>
+          <% end %>
+          <li class="datum-col-jobs jobs-same-class"><span>( </span><%= g.start_date.strftime("%Y") %><span> )</span></li>
+        </ul>
+    </div>
   <% end %>
-</div>
-
-<div id="texter-row">
-  <% @gig.where(texter: true, premiered: true).each do |g| %>
-    <ul class="listing-jobs">
-      <li class="stuck-col-jobs schauspieler-sticker"><%= g.piece %></li>
-      <span class="datum-col-jobs datum-col-mobile"><%= g.start_date.strftime("%Y") %></span>
-      <li class="role-col-jobs jobs-same-class">---</li>
-      <li class="spielort-col-jobs jobs-same-class"><%= g.location %></li>
-      <li class="datum-col-jobs datum-col-noshow"><%= g.start_date.strftime("%Y") %></li>
-    </ul>
-  <% end %>
-</div>
+<% end %>

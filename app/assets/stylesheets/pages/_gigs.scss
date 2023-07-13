@@ -6,11 +6,15 @@
   padding: 5px 0;
   align-items: baseline;
   border-bottom: solid 0.3px gray;
+  font-style: italic;
   #fifty-width-col {
     width: 40%;
   }
   .title-field-jobs {
     width: 20%;
+  }
+  .datum-col-jobs {
+    text-align: right;
   }
 }
 
@@ -30,10 +34,14 @@
   .jobs-same-class {
     width: 20%;
   }
-}
-
-.datum-col-mobile {
-  display: none;
+  .datum-col-jobs {
+    flex: auto;
+    text-align: right;
+    span {
+      font-weight: 600;
+      font-style: italic;
+    }
+  }
 }
 
 @media (max-width: 800px) {
@@ -45,6 +53,17 @@
     .jobs-same-class,
     .stuck-col-jobs {
       width: 100%;
+    }
+    .datum-col-jobs {
+      font-size: 1.3rem;
+    }
+    .role-col-jobs::before {
+      content: "Role: ";
+      font-style: italic;
+    }
+    .spielort-col-jobs::before {
+      content: "Spielort: ";
+      font-style: italic;
     }
   }
 }

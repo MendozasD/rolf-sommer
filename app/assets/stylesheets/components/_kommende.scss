@@ -9,6 +9,10 @@
   backdrop-filter: blur(5.5px);
   -webkit-backdrop-filter: blur(5.5px);
   border: 1px solid rgba(255, 255, 255, 0.16);
+  a {
+    text-decoration: none;
+    color: black;
+  }
   .stuck-col {
     width: 50%;
     font-weight: 400;
@@ -36,25 +40,6 @@
   .piece-title {
     font-size: 1.9rem;
     font-family: $logo-font-light;
-  }
-  //Stickers shown on the
-  .schauspieler-sticker {
-    &::after {
-      content: url("https://res.cloudinary.com/dm4hnoj7v/image/upload/c_scale,w_40/v1688568721/rolf_sommer/drak_blue_s_3x_lhtf5u.png");
-      position: absolute;
-    }
-  }
-  .director-sticker {
-    &::after {
-      content: url("https://res.cloudinary.com/dm4hnoj7v/image/upload/c_scale,w_40/v1688568721/rolf_sommer/drak_blue_r_3x_l0b6ei.png");
-      position: absolute;
-    }
-  }
-  .texter-sticker {
-    &::after {
-      content: url("https://res.cloudinary.com/dm4hnoj7v/image/upload/c_scale,w_40/v1688568721/rolf_sommer/drak_blue_t_3x_j7wk0n.png");
-      position: absolute;
-    }
   }
   &:last-child {
     border-bottom: none;

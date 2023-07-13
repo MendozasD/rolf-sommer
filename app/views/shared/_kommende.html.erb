@@ -1,39 +1,26 @@
-<div class="kommende-card">
-  <div class="title-row">
-    <p class="title-column stuck-col">Stück</p>
-    <p class="title-column datum-col">Premiere</p>
-    <p class="title-column spielort-col">Spielort</p>
-  </div>
+<%# I18n TRANSLATES THE DATE TO GERMAN %>
+<% I18n.with_locale(:de) do %>
+  <div class="kommende-card">
+    <div class="title-row">
+      <p class="title-column stuck-col">Stück</p>
+      <p class="title-column datum-col">Premiere</p>
+      <p class="title-column spielort-col">Spielort</p>
+    </div>
 
-  <% @gig.each do |g| %>
-    <% if !g.premiered %>
+    <% @gig.where(premiered: false).each do |g| %>
       <ul class="gigs-row">
-        <%# If statement filtering stickers for perfomer's field %>
-        <% if g.actor %>
-        <%# ACTOR FIELD %>
-          <li class="stuck-col piece-title schauspieler-sticker">
-            <%= g.piece %>
-          </li>
-        <% elsif g.director %>
-        <%# DIRECTOR FIELD %>
-          <li class="stuck-col piece-title director-sticker">
-            <%= g.piece %>
-          </li>
-        <% else g.texter %>
-        <%# TEXTER FIELD %>
-          <li class="stuck-col piece-title texter-sticker">
-            <%= g.piece %>
-          </li>
-        <% end %>
-        <%# DATE FIELD %>
-        <% if g.start_date %>
-          <li class="datum-col"><%= l(g.start_date, format: '%d %b. %Y') %></li>
-        <% end %>
-        <%# LOCATION FIELD %>
-        <li class="spielort-col">
-          <%= g.location %>
+        <li class="stuck-col piece-title">
+          <% if g.actor %>
+              <%= g.piece %> <span><%= cl_image_tag(cl_img(g)) %></span>
+          <% elsif g.director %>
+              <%= g.piece %> <span><%= cl_image_tag(cl_img(g)) %></span>
+          <% else g.texter %>
+              <%= g.piece %> <span><%= cl_image_tag(cl_img(g)) %></span>
+          <% end %>
         </li>
+        <li class="datum-col"><%= l(g.start_date, format: '%d. %b. %Y') || "" %></li>
+        <li class="spielort-col"><%= g.location || "" %></li>
       </ul>
     <% end %>
-  <% end %>
-</div>
+  </div>
+<% end %>

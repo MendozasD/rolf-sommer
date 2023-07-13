@@ -6,7 +6,7 @@ gem "dotenv-rails", groups: [:development, :test]
 gem "cloudinary"
 gem "devise"
 gem 'actionmailer', '~> 7.0', '>= 7.0.5'
-gem "rails_admin", "3.0"
+gem 'rails_admin', '~> 3.1', '>= 3.1.2'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.5"
@@ -72,3 +72,4 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+gem "sassc-rails"
