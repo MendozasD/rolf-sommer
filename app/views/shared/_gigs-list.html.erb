@@ -5,7 +5,7 @@
         <div class="stuck-col-jobs"><%= g.piece %> <span><%= cl_image_tag(cl_img(g)) %></span></div>
         <div class="role-col-jobs jobs-same-class"><%= g.role %></div>
         <div class="spielort-col-jobs jobs-same-class"><%= g.location %></div>
-        <li class="datum-col-jobs jobs-same-class"><span>( </span><%= g.start_date.strftime("%Y") %><span> )</span></li>
+        <li class="datum-col-jobs">(<%= g.start_date.strftime("%Y") %>)</li>
       <% end %>
     </div>
   <% elsif g.director %>
@@ -14,11 +14,15 @@
           <li class="stuck-col-jobs"><%= g.piece %> <span><%= cl_image_tag(cl_img(g)) %></span></li>
           <% if g.role %>
             <li class="role-col-jobs jobs-same-class"><%= g.role %></li>
+          <% else %>
+            <li class="jobs-same-class"></li>
           <% end %>
           <% if g.location %>
             <li class="spielort-col-jobs jobs-same-class"><%= g.location %></li>
+          <% else %>
+            <li class="jobs-same-class"></li>
           <% end %>
-          <li class="datum-col-jobs jobs-same-class"><span>( </span><%= g.start_date.strftime("%Y") %><span> )</span></li>
+          <li class="datum-col-jobs">(<%= g.start_date.strftime("%Y") %>)</li>
         </ul>
     </div>
   <% elsif g.texter %>
@@ -27,11 +31,16 @@
           <li class="stuck-col-jobs"><%= g.piece %> <span><%= cl_image_tag(cl_img(g)) %></span></li>
           <% if g.role %>
             <li class="role-col-jobs jobs-same-class"><%= g.role %></li>
+          <% else %>
+            <li class="jobs-same-class"></li>
           <% end %>
           <% if g.location %>
             <li class="spielort-col-jobs jobs-same-class"><%= g.location %></li>
+          <% else %>
+            <li class="jobs-same-class"></li>
           <% end %>
-          <li class="datum-col-jobs jobs-same-class"><span>( </span><%= g.start_date.strftime("%Y") %><span> )</span></li>
+          <li class="datum-col-jobs">(<%= g.start_date.strftime("%Y") %>)</li>
+        </ul>
         </ul>
     </div>
   <% end %>

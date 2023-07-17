@@ -11,10 +11,10 @@
     width: 40%;
   }
   .title-field-jobs {
-    width: 20%;
+    width: 25%;
   }
   .datum-col-jobs {
-    text-align: right;
+    width: 10%;
   }
 }
 
@@ -32,15 +32,11 @@
     font-family: $logo-font-light;
   }
   .jobs-same-class {
-    width: 20%;
+    width: 25%;
   }
   .datum-col-jobs {
-    flex: auto;
-    text-align: right;
-    span {
-      font-weight: 600;
-      font-style: italic;
-    }
+    width: fit-content;
+    width: 10%;
   }
 }
 
@@ -58,12 +54,18 @@
       font-size: 1.3rem;
     }
     .role-col-jobs::before {
-      content: "Role: ";
-      font-style: italic;
+      content: "Role";
+      border: solid 0.5px;
+      border-radius: 20px;
+      padding: 2px 10px;
+      margin-right: 5px;
     }
     .spielort-col-jobs::before {
-      content: "Spielort: ";
-      font-style: italic;
+      content: "Spielort";
+      border: solid 0.5px;
+      border-radius: 20px;
+      padding: 2px 10px;
+      margin-right: 5px;
     }
   }
 }

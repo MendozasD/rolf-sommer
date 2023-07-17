@@ -9,8 +9,12 @@
   font-family: "Nyght Serif Light";
   src: url("NyghtSerif-Light.ttf");
 }
+@font-face {
+  font-family: "Zodiak Extrabold";
+  src: url("Zodiak-Thin.ttf");
+}
 
-$headers: "Libre Caslon Text", serif;
 $body: "Lato", sans-serif;
 $logo-font-dark: "Nyght Serif Dark", serif;
 $logo-font-light: "Nyght Serif Light", serif;
+$zodiak: "Zodiak Extrabold", serif;
