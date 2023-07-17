@@ -13,14 +13,14 @@
       padding: 0 4rem;
       text-align: center;
       font-family: $logo-font-light;
-      border-bottom: solid 0.5px $blue;
+      border-bottom: solid 0.5px rgba(128, 128, 128, 0.387);
     }
     .angaben-cols {
       display: flex;
       padding: 20px 60px;
       column-gap: 50px;
       .steckbrief-bullet {
-        border-bottom: dashed 0.5px $blue;
+        border-bottom: solid 0.5px rgba(128, 128, 128, 0.387);
         margin-bottom: 2px;
       }
       .angaben-col-left,
@@ -50,14 +50,15 @@
       right: 10px;
     }
   }
-  .info-box-top {
+  .info-box-top,
+  .info-box-bottom {
     &::before {
       content: "";
       position: absolute;
-      border-left: solid 0.5px $blue;
+      border-left: solid 0.5px rgba(128, 128, 128, 0.387);
       left: 50%;
       top: 20%;
-      height: 422px;
+      height: 70%;
     }
   }
 }
@@ -76,6 +77,13 @@
         padding: 0;
         column-gap: 20px;
         font-size: 0.9rem;
+      }
+    }
+    .info-box-top,
+    .info-box-bottom {
+      &::before {
+        top: 25%;
+        height: 70%;
       }
     }
   }

@@ -23,9 +23,9 @@
   list-style: none;
   width: 100%;
   margin: 0;
-  padding: 5px 0;
   border-bottom: solid 0.3px gray;
   align-items: center;
+  padding: 5px 0;
   .stuck-col-jobs {
     width: 40%;
     font-size: 1.9rem;
@@ -46,26 +46,34 @@
   }
   .listing-jobs {
     flex-direction: column;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 20px;
+    border: solid 0.3px gray;
     .jobs-same-class,
     .stuck-col-jobs {
       width: 100%;
     }
     .datum-col-jobs {
+      position: relative;
+      top: -10px;
+      width: auto;
+      align-self: flex-end;
+      font-family: $logo-font-light;
       font-size: 1.3rem;
     }
+
     .role-col-jobs::before {
-      content: "Role";
-      border: solid 0.5px;
+      content: "Role:";
       border-radius: 20px;
-      padding: 2px 10px;
       margin-right: 5px;
+      font-weight: normal;
     }
     .spielort-col-jobs::before {
-      content: "Spielort";
-      border: solid 0.5px;
+      content: "Spielort:";
       border-radius: 20px;
-      padding: 2px 10px;
       margin-right: 5px;
+      font-weight: normal;
     }
   }
 }

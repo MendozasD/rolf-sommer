@@ -68,6 +68,9 @@
     .gigs-row {
       flex-wrap: wrap;
       padding: 12px 0;
+      border: solid 0.3px gray;
+      border-radius: 20px;
+      margin: 10px 0;
       .stuck-col {
         width: 100%;
         font-size: 1.5rem;
