@@ -17,9 +17,9 @@
           <% else g.texter %>
               <%= g.piece %> <span><%= cl_image_tag(cl_img(g)) %></span>
           <% end %>
-        </li>
         <li class="datum-col"><%= l(g.start_date, format: '%d. %b. %Y') || "" %></li>
         <li class="spielort-col"><%= g.location || "" %></li>
+        </li>
       </ul>
     <% end %>
   </div>

@@ -45,35 +45,34 @@
     display: none;
   }
   .listing-jobs {
-    flex-direction: column;
+    flex-wrap: wrap;
     padding: 10px;
     margin: 10px 0;
     border-radius: 20px;
     border: solid 0.3px gray;
-    .jobs-same-class,
-    .stuck-col-jobs {
+    .no-show-mobile {
+      display: none;
+    }
+    .stuck-col-jobs,
+    .role-col-jobs {
       width: 100%;
+      text-align: center;
     }
-    .datum-col-jobs {
-      position: relative;
-      top: -10px;
-      width: auto;
-      align-self: flex-end;
-      font-family: $logo-font-light;
-      font-size: 1.3rem;
+    .role-col-jobs {
+      margin: 10px 0;
+      &::before {
+        content: "Role:";
+        margin-right: 5px;
+      }
     }
-
-    .role-col-jobs::before {
-      content: "Role:";
+    .datum-col-jobs,
+    .spielort-col-jobs {
+      margin: 0 auto;
+      width: fit-content;
+      padding: 0 10px;
+      text-align: center;
+      border: solid 0.5px gray;
       border-radius: 20px;
-      margin-right: 5px;
-      font-weight: normal;
-    }
-    .spielort-col-jobs::before {
-      content: "Spielort:";
-      border-radius: 20px;
-      margin-right: 5px;
-      font-weight: normal;
     }
   }
 }
