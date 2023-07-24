@@ -7,11 +7,21 @@ module ApplicationHelper
 
   def cl_img(g)
     if g.actor
-        'https://res.cloudinary.com/dm4hnoj7v/image/upload/c_scale,w_40/v1688568721/rolf_sommer/drak_blue_s_3x_lhtf5u.png'
+        'https://res.cloudinary.com/dm4hnoj7v/image/upload/v1690207472/rolf_sommer/star_neu_s_kdx5uw.svg'
     elsif g.director
-        'https://res.cloudinary.com/dm4hnoj7v/image/upload/c_scale,w_40/v1688568721/rolf_sommer/drak_blue_r_3x_l0b6ei.png'
+        'https://res.cloudinary.com/dm4hnoj7v/image/upload/v1690207472/rolf_sommer/star_neu_r_igcrfo.svg'
     else g.texter
-        'https://res.cloudinary.com/dm4hnoj7v/image/upload/c_scale,w_40/v1688568721/rolf_sommer/drak_blue_t_3x_j7wk0n.png'
+        'https://res.cloudinary.com/dm4hnoj7v/image/upload/v1690207472/rolf_sommer/star_neu_t_ctanq7.svg'
+    end
+  end
+
+  def work_as(g)
+    if g.actor
+      'S'
+    elsif g.director
+      'R'
+    else g.texter
+      'T'
     end
   end
 end

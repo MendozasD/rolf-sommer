@@ -1,26 +1,25 @@
 .stickers-row {
-  position: fixed;
-  right: -30px;
-  width: 10%;
-  display: block;
-  top: 50%;
   display: flex;
-  justify-content: center;
-  transform: rotate(-90deg);
-  .sticker-1 {
-    display: flex;
-    align-items: center;
-    padding: 0 5px;
-    font-size: 1.2rem;
-    font-weight: 300;
+  justify-content: flex-start;
+  height: fit-content;
+  p {
+    font-size: 1.5rem;
+    font-weight: 200;
+    margin: 0;
+    font-style: italic;
+  }
+  img {
+    width: 30px;
+    height: 30px;
   }
 }
 
 @media (max-width: 800px) {
   .stickers-row {
-    right: 0;
-    .sticker-1 {
-      font-size: 0.8rem;
+    align-items: center;
+    p {
+      font-size: 1rem;
+      font-weight: 400;
     }
   }
 }

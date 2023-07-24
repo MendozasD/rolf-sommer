@@ -3,46 +3,50 @@
   padding: 40px;
   width: 90%;
   border-radius: 20px;
-  // GLASS BACKGROUND
-  background: rgba(255, 255, 255, 0.36);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5.5px);
-  -webkit-backdrop-filter: blur(5.5px);
-  border: 1px solid rgba(255, 255, 255, 0.16);
   a {
+    // Need this to avoid decoreation on links for toggle
     text-decoration: none;
     color: black;
   }
-  .stuck-col {
-    width: 50%;
-    font-weight: 400;
-  }
-  .datum-col,
-  .spielort-col {
-    width: 25%;
-    align-self: center;
-  }
 }
 
-.title-column {
-  font-style: italic;
-}
-
-.title-row,
 .gigs-row {
+  position: relative;
+  border: solid 0.3px gray;
+  padding: 12px 0;
+  border-radius: 20px;
+  margin: 10px 0;
   width: 100%;
   display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 5px 0;
-  align-items: baseline;
-  border-bottom: solid 0.3px gray;
+  flex-wrap: wrap;
+  justify-content: center;
   .piece-title {
-    font-size: 1.9rem;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    margin: 0;
     font-family: $logo-font-light;
   }
-  &:last-child {
-    border-bottom: none;
+  .spielort-col,
+  .datum-col {
+    text-align: center;
+    display: inline-block;
+    padding: 0 20px;
+    margin: 0 5px;
+    border: solid 1px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+  }
+  .sticker {
+    // POSITION
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    margin: 0;
+    // Size
+    width: 50px;
+    height: 50px;
   }
 }
 
@@ -55,6 +59,15 @@
   );
 }
 
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 // *********************************************
 
 @media (max-width: 800px) {
@@ -62,28 +75,23 @@
     padding: 10px 15px;
     width: 98%;
     font-weight: 300;
-    .title-row {
-      display: none;
-    }
     .gigs-row {
       flex-wrap: wrap;
-      padding: 12px 0;
-      border: solid 0.3px gray;
-      border-radius: 20px;
-      margin: 10px 0;
       .stuck-col {
-        width: 100%;
-        font-size: 1.5rem;
-        text-align: center;
+        font-size: 2rem;
       }
       .datum-col,
       .spielort-col {
-        margin: 0 auto;
+        margin: 0 auto 5px auto;
         width: fit-content;
-        padding: 0 10px;
         text-align: center;
         border: solid 0.5px gray;
         border-radius: 20px;
+        font-size: 1rem;
+      }
+      .sticker {
+        width: 40px;
+        height: 40px;
       }
     }
   }

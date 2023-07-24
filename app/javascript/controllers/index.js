@@ -19,5 +19,8 @@ application.register("magnetic-elements", MagneticElementsController)
 import ScrollController from "./scroll_controller"
 application.register("scroll", ScrollController)
 
+import VanillaMarqueeController from "./vanilla_marquee_controller"
+application.register("vanilla-marquee", VanillaMarqueeController)
+
 import VanillaTiltController from "./vanilla_tilt_controller"
 application.register("vanilla-tilt", VanillaTiltController)

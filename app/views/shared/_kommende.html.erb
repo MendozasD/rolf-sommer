@@ -1,26 +1,14 @@
 <%# I18n TRANSLATES THE DATE TO GERMAN %>
 <% I18n.with_locale(:de) do %>
-  <div class="kommende-card">
-    <div class="title-row">
-      <p class="title-column stuck-col">Stück</p>
-      <p class="title-column datum-col">Premiere</p>
-      <p class="title-column spielort-col">Spielort</p>
-    </div>
-
+  <div class="kommende-card" data-controller="vanilla-marquee">
+    <%= render 'shared/work-vertical-button'%>
     <% @gig.where(premiered: false).each do |g| %>
-      <ul class="gigs-row">
-        <li class="stuck-col piece-title">
-          <% if g.actor %>
-              <%= g.piece %> <span><%= cl_image_tag(cl_img(g)) %></span>
-          <% elsif g.director %>
-              <%= g.piece %> <span><%= cl_image_tag(cl_img(g)) %></span>
-          <% else g.texter %>
-              <%= g.piece %> <span><%= cl_image_tag(cl_img(g)) %></span>
-          <% end %>
-        <li class="datum-col"><%= l(g.start_date, format: '%d. %b. %Y') || "" %></li>
-        <li class="spielort-col"><%= g.location || "" %></li>
-        </li>
-      </ul>
+      <section class="gigs-row">
+        <div class="datum-col"><%= l(g.start_date, format: '%d. %b. %Y') || "" %></div>
+        <div class="spielort-col"><%= g.location || "" %></div>
+        <div class="stuck-col piece-title"><%= g.piece %></div>
+        <%= cl_image_tag(cl_img(g), class: "sticker") %>
+      </section>
     <% end %>
   </div>
 <% end %>
