@@ -1,7 +1,7 @@
 .stickers-row {
   display: flex;
-  justify-content: flex-start;
   height: fit-content;
+
   p {
     font-size: 1.5rem;
     font-weight: 200;
@@ -17,9 +17,11 @@
 @media (max-width: 800px) {
   .stickers-row {
     align-items: center;
+    justify-content: center;
+    border-bottom: solid 1px gray;
     p {
-      font-size: 1rem;
-      font-weight: 400;
+      font-size: 0.9rem;
+      text-transform: uppercase;
     }
   }
 }

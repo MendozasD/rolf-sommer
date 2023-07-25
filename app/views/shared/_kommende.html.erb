@@ -4,10 +4,10 @@
     <%= render 'shared/work-vertical-button'%>
     <% @gig.where(premiered: false).each do |g| %>
       <section class="gigs-row">
-        <div class="datum-col"><%= l(g.start_date, format: '%d. %b. %Y') || "" %></div>
-        <div class="spielort-col"><%= g.location || "" %></div>
+        <div class="datum-col commom-col-kommende"><%= l(g.start_date, format: '%d. %b. %Y') || "" %></div>
+        <div class="spielort-col commom-col-kommende"><%= g.location || "" %></div>
         <div class="stuck-col piece-title"><%= g.piece %></div>
-        <%= cl_image_tag(cl_img(g), class: "sticker") %>
+        <%= embedded_svg(sticker_srt(g), class: 'sticker') %>
       </section>
     <% end %>
   </div>
