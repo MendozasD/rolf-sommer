@@ -52,7 +52,9 @@
   }
 }
 
-.gigs-row:hover {
+.gigs-row:hover,
+.gigs-row:focus {
+  background-color: rgba(255, 255, 219, 0.415);
   // THIS IS POSSIBLE ONLY BY STILING DIRECTLY ON THE SVG FILE: "DIRECTOR-STICKER"
   svg {
     filter: url(#shadow);
@@ -78,18 +80,15 @@
       .stuck-col {
         font-size: 2rem;
       }
-      .datum-col,
-      .spielort-col {
+      .commom-col-kommende {
         margin: 0 auto 5px auto;
         width: fit-content;
         text-align: center;
-        border: solid 0.5px gray;
-        border-radius: 20px;
         font-size: 1rem;
       }
       .sticker {
-        width: 40px;
-        height: 40px;
+        width: 50px;
+        height: 50px;
       }
     }
   }
