@@ -38,18 +38,36 @@
       font-weight: 300;
       margin: 0 0.5rem;
       padding: 10px 15px;
-      border: solid 0.5px;
-      border-radius: 30px;
       background: none;
-      a {
-        text-decoration: none;
+      border: none;
+      &:hover {
+        &::before {
+          content: "";
+          background-color: black;
+          border-radius: 50%;
+          position: absolute;
+          width: 5px;
+          height: 5px;
+          right: 50%;
+          bottom: 0;
+        }
       }
     }
     .active {
-      background-color: $rosa;
-      border-radius: 30px;
+      text-decoration: none;
       button {
-        font-style: italic;
+        font-weight: 400;
+        position: relative;
+        &::before {
+          content: "";
+          background-color: black;
+          border-radius: 50%;
+          position: absolute;
+          width: 5px;
+          height: 5px;
+          right: 50%;
+          bottom: 0;
+        }
       }
     }
   }

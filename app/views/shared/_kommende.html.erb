@@ -1,7 +1,6 @@
-<%# I18n TRANSLATES THE DATE TO GERMAN %>
+<%# I18n TRANSLATES THE DATES TO GERMAN %>
 <% I18n.with_locale(:de) do %>
   <div class="kommende-card" data-controller="vanilla-marquee">
-    <%= render 'shared/work-vertical-button'%>
     <% @gig.where(premiered: false).each do |g| %>
       <section class="gigs-row">
         <div class="datum-col commom-col-kommende"><%= l(g.start_date, format: '%d. %b. %Y') || "" %></div>
