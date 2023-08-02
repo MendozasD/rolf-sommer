@@ -1,12 +1,17 @@
-<div class="tilt-effect-box position-absolute top-50 start-50 translate-middle" data-controller="vanilla-tilt" data-action="mouseover->vanilla-tilt#tilt">
-  <div class="main-box-home js-tilt" data-tilt data-tilt-max="2" data-tilt-speed="400" data-tilt-perspective="500" >
-    <%= cl_image_tag("rolf_sommer/qhpewywomcjwojevxg6n", class: 'inside-foto')%>
-    <section class="text-box-home">
-      <div class="profile-list">
-        <p>Schauspieler</p>
-        <p>Regisseur</p>
+<div class="box">
+  <div id="main-box-home">
+    <p id="title-home">Rolf Sommer</p>
+    <section id="text-foto-container">
+      <p id="profile-list">Schauspieler, <br>Regisseur</p>
+      <%= cl_image_tag("rolf_sommer/main-foto_owsamc.jpg", id: 'main-foto-mobile') %>
+      <%= cl_image_tag("rolf_sommer/qhpewywomcjwojevxg6n", id: 'main-foto-desktop')%>
+      <div id="greeting-home">
+        <span>Guten tag!</span>
+        <br><br>
+        Seit bald zwanzig Jahren bewege ich mich unentwegt als Schauspieler und Regisseur durch die Schweizer Theater- und Musicallandschaft – mit einigen Abstechern auch nach Deutschland. Ausserdem schreibe und übersetze ich Theater- und Liedtexte. Ich lebe in Zürich, bin aber viel unterwegs, vor allem auch im Kanton Uri, wo ich aufgewachsen bin.
+        <br><br>
+        Ich freue mich darauf, Sie kennenzulernen!
       </div>
-      <p class="main-title">Rolf Sommer</p>
     </section>
   </div>
 </div>

@@ -1,8 +1,6 @@
 <nav class="nav-bar" data-controller="scroll" data-scroll-target="navbar">
   <%# WHEN ON HOME PAGE, DON'T SHOW LOGO-LETTERS %>
-  <% if !current_page?(action: 'home') %>
     <%= link_to 'Rolf Sommer', root_path, class: "logo-letters" %>
-  <% end %>
 
   <%# SUN LOGO %>
   <%= link_to root_path do %>

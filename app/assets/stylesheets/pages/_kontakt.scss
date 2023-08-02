@@ -1,17 +1,4 @@
 .kontakt-container {
-  #kontakt-description {
-    padding: 50px 50px 10px 50px;
-    font-size: 1.2rem;
-    p {
-      border: solid 0.5px black;
-      border-radius: 20px;
-      padding: 20px 30px;
-      &::first-letter {
-        font-family: $logo-font-light;
-        initial-letter: 2;
-      }
-    }
-  }
   .kontakt-divider {
     display: flex;
     padding: 3rem;
