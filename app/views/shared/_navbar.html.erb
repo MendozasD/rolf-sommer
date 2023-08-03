@@ -1,10 +1,7 @@
 <nav class="nav-bar" data-controller="scroll" data-scroll-target="navbar">
-  <%# WHEN ON HOME PAGE, DON'T SHOW LOGO-LETTERS %>
-    <%= link_to 'Rolf Sommer', root_path, class: "logo-letters" %>
-
-  <%# SUN LOGO %>
-  <%= link_to root_path do %>
-    <%= cl_image_tag("https://res.cloudinary.com/dm4hnoj7v/image/upload/c_scale,w_50/v1686929728/rolf_sommer/sun_icon_qzn60f.png", class: "sun-logo")%>
+  <%= link_to root_path, id: 'logo' do %>
+    <div class="logo-letters">Rolf Sommer &nbsp</div>
+    <%= cl_image_tag("https://res.cloudinary.com/dm4hnoj7v/image/upload/c_scale,w_40/v1686929728/rolf_sommer/sun_icon_qzn60f.png", class: "sun-logo")%>
   <% end %>
 
   <div class="main-menu" data-controller="magnetic-elements">

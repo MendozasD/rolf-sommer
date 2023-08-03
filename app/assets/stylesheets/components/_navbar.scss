@@ -9,22 +9,25 @@
   padding: 0 20px;
   align-items: center;
   height: 70px;
-  .logo-letters {
-    text-align: center;
-    margin: 0;
-    font-family: $logo-font-dark;
-    letter-spacing: -3px;
+  #logo {
+    display: flex;
     text-decoration: none;
-    white-space: nowrap;
-    font-size: 3rem;
-    a {
-      color: black;
+    .logo-letters {
+      text-align: center;
+      margin: 0;
+      font-family: $logo-font-light;
+      letter-spacing: -3px;
+      white-space: nowrap;
+      font-size: 3rem;
+      a {
+        color: black;
+      }
     }
-  }
-  .sun-logo {
-    display: block;
-    align-self: center;
-    animation: rotate 12s linear infinite;
+    .sun-logo {
+      display: block;
+      align-self: center;
+      animation: rotate 12s linear infinite;
+    }
   }
   .main-menu {
     display: flex;

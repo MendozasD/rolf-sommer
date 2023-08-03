@@ -5,13 +5,19 @@
       <p id="profile-list">Schauspieler, <br>Regisseur</p>
       <%= cl_image_tag("rolf_sommer/main-foto_owsamc.jpg", id: 'main-foto-mobile') %>
       <%= cl_image_tag("rolf_sommer/qhpewywomcjwojevxg6n", id: 'main-foto-desktop')%>
-      <div id="greeting-home">
-        <span>Guten tag!</span>
-        <br><br>
-        Seit bald zwanzig Jahren bewege ich mich unentwegt als Schauspieler und Regisseur durch die Schweizer Theater- und Musicallandschaft – mit einigen Abstechern auch nach Deutschland. Ausserdem schreibe und übersetze ich Theater- und Liedtexte. Ich lebe in Zürich, bin aber viel unterwegs, vor allem auch im Kanton Uri, wo ich aufgewachsen bin.
-        <br><br>
-        Ich freue mich darauf, Sie kennenzulernen!
-      </div>
     </section>
+      <div id="greeting-home">
+        <div class="greeting-home-box" id="guten-tag">
+          Guten tag!
+          <span><%= cl_image_tag("rolf_sommer/sun_icon_qzn60f.png", :width=>20, :crop=>"scale") %></span>
+        </div>
+        <p id="middle-p">
+          Seit bald zwanzig Jahren bewege ich mich unentwegt als Schauspieler und Regisseur durch die Schweizer Theater- und Musicallandschaft – mit einigen Abstechern auch nach Deutschland. Ausserdem schreibe und übersetze ich Theater- und Liedtexte. Ich lebe in Zürich, bin aber viel unterwegs, vor allem auch im Kanton Uri, wo ich aufgewachsen bin.
+        </p>
+        <div class="greeting-home-box" id="freue-mich">
+          Ich freue mich darauf, Sie kennenzulernen!
+          <span><%= cl_image_tag("rolf_sommer/sun_icon_qzn60f.png", :width=>20, :crop=>"scale") %></span>
+        </div>
+      </div>
   </div>
 </div>
