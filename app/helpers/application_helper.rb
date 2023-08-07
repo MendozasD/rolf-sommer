@@ -47,5 +47,4 @@ module ApplicationHelper
       'texter-sticker'
     end
   end
-
 end

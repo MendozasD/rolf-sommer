@@ -2,12 +2,21 @@
 <% I18n.with_locale(:de) do %>
   <div class="kommende-card">
     <% @gig.where(premiered: false).each do |g| %>
-      <section class="gigs-row">
-        <div class="datum-col commom-col-kommende"><%= l(g.start_date, format: '%d. %b. %Y') || "" %></div>
-        <div class="spielort-col commom-col-kommende"><%= g.location || "" %></div>
-        <div class="stuck-col piece-title"><%= g.piece %></div>
-        <%= embedded_svg(sticker_srt(g), class: 'sticker') %>
-      </section>
+      <% if g.url.present? && g.url != false %>
+        <%= link_to g.url, class: 'gigs-row', target: '_blank' do %>
+          <div class="datum-col commom-col-kommende"><%= l(g.start_date, format: '%d. %b. %Y') || "" %></div>
+          <div class="spielort-col commom-col-kommende"><%= g.location || "" %></div>
+          <div class="stuck-col piece-title"><%= g.piece %></div>
+          <%= embedded_svg(sticker_srt(g), class: 'sticker') %>
+        <% end %>
+      <% else %>
+        <section class="gigs-row">
+          <div class="datum-col commom-col-kommende"><%= l(g.start_date, format: '%d. %b. %Y') || "" %></div>
+          <div class="spielort-col commom-col-kommende"><%= g.location || "" %></div>
+          <div class="stuck-col piece-title"><%= g.piece %></div>
+          <%= embedded_svg(sticker_srt(g), class: 'sticker') %>
+        </section>
+      <% end %>
     <% end %>
   </div>
 <% end %>
