@@ -22,6 +22,7 @@
     flex-wrap: wrap;
     justify-content: center;
     background-color: rgb(216, 235, 255);
+    overflow: hidden;
     .piece-title {
       overflow: hidden;
       width: 100%;
@@ -55,11 +56,25 @@
 
 .gigs-row:hover,
 .gigs-row:focus {
+  --gap: 1rem;
   // Glass BG
   background: rgba(255, 255, 255, 0.2);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(1.9px);
   border: solid 1px;
+  .piece-title {
+    animation: scroll 10s linear infinite;
+    &::before,
+    &::after {
+      content: "puta";
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%; /* Set to match the width of the original scrolling div */
+      animation: scroll 10s linear infinite;
+    }
+  }
   .commom-col-kommende {
     background-color: rgb(216, 235, 255);
     transition: all ease 0.5s;
@@ -69,6 +84,16 @@
     filter: url(#shadow);
     transform: rotate(-20deg) scale(1.5);
     transition: transform ease 0.5s;
+  }
+}
+
+// KEYFRAMES
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
   }
 }
 
