@@ -1,52 +1,29 @@
 import { Controller } from "@hotwired/stimulus";
 
-// BUTTON FILTERING SELECTION BORDER
-function showAll() {
-  document.getElementById("actor-row").classList.add("display-list");
-  document.getElementById("director-row").classList.add("display-list");
-  document.getElementById("texter-row").classList.add("display-list");
-}
-
-function clearAll() {
-  document.getElementById("actor-row").className = "";
-  document.getElementById("director-row").className = "";
-  document.getElementById("texter-row").className = "";
-}
-
-function hideDirector() {
-  let dd = document.getElementById("director-row");
-  dd.className = "";
-  dd.classList.add("display-list-not");
-}
-function hideTexter() {
-  let dd = document.getElementById("texter-row");
-  dd.className = "";
-  dd.classList.add("display-list-not");
-}
-function hideActor() {
-  let dd = document.getElementById("actor-row");
-  dd.className = "";
-  dd.classList.add("display-list-not");
-}
-
 export default class extends Controller {
+  static targets = ["actorRow", "directorRow", "texterRow"];
+
   showAll() {
-    clearAll();
-    showAll();
+    this.actorRowTarget.hidden = false;
+    this.directorRowTarget.hidden = false;
+    this.texterRowTarget.hidden = false;
   }
+
   showActor() {
-    document.getElementById("actor-row").classList.add("display-list");
-    hideDirector();
-    hideTexter();
+    this.actorRowTarget.hidden = false;
+    this.directorRowTarget.hidden = true;
+    this.texterRowTarget.hidden = true;
   }
+
   showDirector() {
-    document.getElementById("director-row").classList.add("display-list");
-    hideActor();
-    hideTexter();
+    this.actorRowTarget.hidden = true;
+    this.directorRowTarget.hidden = false;
+    this.texterRowTarget.hidden = true;
   }
+
   showTexter() {
-    document.getElementById("texter-row").classList.add("display-list");
-    hideActor();
-    hideDirector();
+    this.actorRowTarget.hidden = true;
+    this.directorRowTarget.hidden = true;
+    this.texterRowTarget.hidden = false;
   }
 }

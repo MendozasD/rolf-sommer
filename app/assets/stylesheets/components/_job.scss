@@ -26,19 +26,6 @@
   }
 }
 
-// FILTERING JOBS BY CATEGORY
-.display-list-not {
-  display: none;
-}
-
-.display-list {
-  display: contents;
-}
-
-.jobs-card {
-  margin-bottom: 50px;
-}
-
 @media (max-width: 800px) {
   .job-button-filter {
     display: flex;

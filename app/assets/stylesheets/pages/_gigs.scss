@@ -1,21 +1,13 @@
-#title-row-jobs {
-  display: flex;
-  width: 100%;
-  list-style: none;
-  margin: 0;
-  padding: 5px 0;
-  align-items: baseline;
-  border-bottom: solid 0.3px gray;
-  font-style: italic;
-  #fifty-width-col {
-    width: 40%;
-  }
-  .title-field-jobs {
-    width: 25%;
-  }
-  .datum-col-jobs {
-    width: 10%;
-  }
+// FILTERING JOBS BY CATEGORY
+.display-none {
+  display: none;
+}
+.display-list {
+  display: contents;
+}
+
+.jobs-card {
+  margin-bottom: 50px;
 }
 
 .listing-jobs {

@@ -1,33 +1,38 @@
-<% @gig.where(premiered: true).order(start_date: :desc).each do |g| %>
-  <% if g.actor %>
-    <div id="actor-row">
-      <%= link_to show_path(g.id), data: { turbo_frame: "modal" }, class: 'listing-jobs modal-1' do %>
-        <div class="stuck-col-jobs"><%= g.piece %> <span><%= cl_image_tag(cl_img(g)) %></span></div>
-        <div class="role-col-jobs jobs-same-class"><%= g.role %></div>
-        <div class="spielort-col-jobs jobs-same-class"><%= g.location %></div>
-        <div class="datum-col-jobs"><%= g.start_date.strftime("%Y") %></div>
+  <div class="jobs-filter" data-controller="filter border">
+    <section class="job-button-filter">
+      <button id="btn-all" class="btn-border-off" data-action="click->filter#showAll click->border#all" data-border-target="button">Alles</button>
+      <button id="btn-actor" class="btn-border-off" data-action="click->filter#showActor click->border#actor" data-border-target="button">Schauspieler</button>
+      <button id="btn-director" class="btn-border-off" data-action="click->filter#showDirector click->border#director" data-border-target="button">Regissuer</button>
+      <button id="btn-texter" class="btn-border-off" data-action="click->filter#showTexter click->border#texter" data-border-target="button">Texter</button>
+    </section>
+
+    <div class="kommende-card">
+      <%# Rendering the list of gigs with their filtering buttons %>
+      <% @gig.where(premiered: true).order(start_date: :desc).each do |g| %>
+        <% if g.actor %>
+          <div class="actor-row" data-filter-target="actorRow">
+            <section class="listing-jobs">
+              <div class="stuck-col-jobs"><%= g.piece %> <span><%= cl_image_tag(cl_img(g)) %></span></div>
+              <div class="role-col-jobs jobs-same-class"><%= g.role %></div>
+              <div class="spielort-col-jobs jobs-same-class"><%= g.location %></div>
+              <div class="datum-col-jobs"><%= g.start_date.strftime("%Y") %></div>
+            </section>
+          </div>
+        <% elsif g.director %>
+          <div class="director-row" data-filter-target="directorRow">
+            <section class="listing-jobs">
+              <div class="stuck-col-jobs"><%= g.piece %> <span><%= cl_image_tag(cl_img(g)) %></span></div>
+              <div class="spielort-col-jobs jobs-same-class"><%= g.location %></div>
+              <div class="datum-col-jobs"><%= g.start_date.strftime("%Y") %></div>
+            </section>
+          </div>
+        <% elsif g.texter %>
+          <div class="texter-row" data-filter-target="texterRow">
+            <section class="listing-jobs">
+              <div class="stuck-col-jobs"><%= g.piece %> <span><%= cl_image_tag(cl_img(g)) %></span></div>
+              <div class="datum-col-jobs"><%= g.start_date.strftime("%Y") %></div>
+            </section>
+          </div>
+        <% end %>
       <% end %>
     </div>
-  <% elsif g.director %>
-    <div id="director-row">
-      <section class="listing-jobs">
-        <div class="stuck-col-jobs"><%= g.piece %> <span><%= cl_image_tag(cl_img(g)) %></span></div>
-        <%# Role's empty DIV to fill up section on desktop view %>
-        <div class="jobs-same-class no-show-mobile"></div>
-        <div class="spielort-col-jobs jobs-same-class"><%= g.location %></div>
-        <div class="datum-col-jobs"><%= g.start_date.strftime("%Y") %></div>
-      </section>
-    </div>
-  <% elsif g.texter %>
-    <div id="texter-row">
-      <section class="listing-jobs">
-        <div class="stuck-col-jobs"><%= g.piece %> <span><%= cl_image_tag(cl_img(g)) %></span></div>
-        <%# Role's empty DIV to fill up section on desktop view %>
-        <div class="jobs-same-class no-show-mobile"></div>
-        <%# Location's empty DIV to fill up section on desktop view %>
-        <div class="spielort-col-jobs jobs-same-class"><%= g.location || "" %></div>
-        <div class="datum-col-jobs"><%= g.start_date.strftime("%Y") %></div>
-      </section>
-    </div>
-  <% end %>
-<% end %>
