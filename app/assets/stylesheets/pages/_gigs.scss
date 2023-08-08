@@ -1,34 +1,29 @@
-// FILTERING JOBS BY CATEGORY
-.display-none {
-  display: none;
-}
-.display-list {
-  display: contents;
-}
-
-.jobs-card {
+.jobs-filter {
   margin-bottom: 50px;
 }
 
-.listing-jobs {
+.kommende-card {
   display: flex;
-  list-style: none;
-  width: 100%;
-  margin: 0;
-  border-bottom: solid 0.3px gray;
-  align-items: center;
-  padding: 5px 0;
-  .stuck-col-jobs {
-    width: 40%;
-    font-size: 1.9rem;
-    font-family: $logo-font-light;
-  }
-  .jobs-same-class {
-    width: 25%;
-  }
-  .datum-col-jobs {
-    width: fit-content;
-    width: 10%;
+  flex-wrap: wrap;
+  justify-content: center;
+  .listing-jobs {
+    position: relative;
+    border: solid 0.3px gray;
+    border-radius: 20px;
+    min-width: 300px;
+    padding: 20px;
+    margin: 20px;
+    .stuck-col-jobs {
+      font-family: $logo-font-light;
+      font-size: 2rem;
+      width: inherit;
+    }
+    .sticker {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      width: 50px;
+    }
   }
 }
 

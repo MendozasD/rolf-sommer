@@ -10,29 +10,26 @@
       <%# Rendering the list of gigs with their filtering buttons %>
       <% @gig.where(premiered: true).order(start_date: :desc).each do |g| %>
         <% if g.actor %>
-          <div class="actor-row" data-filter-target="actorRow">
-            <section class="listing-jobs">
-              <div class="stuck-col-jobs"><%= g.piece %> <span><%= cl_image_tag(cl_img(g)) %></span></div>
-              <div class="role-col-jobs jobs-same-class"><%= g.role %></div>
-              <div class="spielort-col-jobs jobs-same-class"><%= g.location %></div>
-              <div class="datum-col-jobs"><%= g.start_date.strftime("%Y") %></div>
-            </section>
-          </div>
+          <section class="listing-jobs actor-list" data-filter-target="actorRow">
+            <div class="stuck-col-jobs"><%= g.piece %></div>
+            <div class="role-col-jobs jobs-same-class"><%= g.role %></div>
+            <div class="spielort-col-jobs jobs-same-class"><%= g.location %></div>
+            <div class="datum-col-jobs"><%= g.start_date.strftime("%Y") %></div>
+            <%= embedded_svg(sticker_srt(g), class: 'sticker') %>
+          </section>
         <% elsif g.director %>
-          <div class="director-row" data-filter-target="directorRow">
-            <section class="listing-jobs">
-              <div class="stuck-col-jobs"><%= g.piece %> <span><%= cl_image_tag(cl_img(g)) %></span></div>
-              <div class="spielort-col-jobs jobs-same-class"><%= g.location %></div>
-              <div class="datum-col-jobs"><%= g.start_date.strftime("%Y") %></div>
-            </section>
-          </div>
+          <section class="listing-jobs director-list" data-filter-target="directorRow">
+            <div class="stuck-col-jobs"><%= g.piece %></div>
+            <div class="spielort-col-jobs jobs-same-class"><%= g.location %></div>
+            <div class="datum-col-jobs"><%= g.start_date.strftime("%Y") %></div>
+            <%= embedded_svg(sticker_srt(g), class: 'sticker') %>
+          </section>
         <% elsif g.texter %>
-          <div class="texter-row" data-filter-target="texterRow">
-            <section class="listing-jobs">
-              <div class="stuck-col-jobs"><%= g.piece %> <span><%= cl_image_tag(cl_img(g)) %></span></div>
-              <div class="datum-col-jobs"><%= g.start_date.strftime("%Y") %></div>
-            </section>
-          </div>
+          <section class="listing-jobs texter-list" data-filter-target="texterRow">
+            <div class="stuck-col-jobs"><%= g.piece %></div>
+            <div class="datum-col-jobs"><%= g.start_date.strftime("%Y") %></div>
+            <%= embedded_svg(sticker_srt(g), class: 'sticker') %>
+          </section>
         <% end %>
       <% end %>
     </div>
