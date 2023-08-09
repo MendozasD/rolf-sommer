@@ -1,36 +1,31 @@
-.kontakt-container {
-  .kontakt-divider {
+#kontakt-container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  #kontack-foto {
+    height: calc(100vh - 70px);
+    border-radius: 20px;
+  }
+  #kontakt-link-box {
+    position: absolute;
     display: flex;
-    padding: 3rem;
-    #kontakt-foto-container {
-      width: 50%;
-      text-align: end;
-      #kontack-foto {
-        height: 80vh;
-        border-radius: 20px;
-      }
-    }
-    #kontakt-link-box {
-      display: flex;
-      flex-direction: column;
-      width: 50%;
-      text-align: left;
-      margin-left: 50px;
-      .link-1 {
-        font-family: $logo-font-light;
-        text-decoration: none;
-        font-size: 1.5rem;
-        width: fit-content;
-        padding: 10px 40px;
-        border: solid $blue 0.5px;
-        border-radius: 40px;
-        margin: 10px 0;
-        color: black;
-        &:hover {
-          background-color: $rosa;
-          color: $white;
-          border: solid $rosa 0.5px;
-        }
+    flex-direction: column;
+    bottom: 0;
+    .link-1 {
+      font-family: $logo-font-light;
+      text-decoration: none;
+      font-size: 1.5rem;
+      width: fit-content;
+      padding: 10px 40px;
+      border: solid $blue 0.5px;
+      border-radius: 40px;
+      margin: 10px 0;
+      color: black;
+      background-color: white;
+      &:hover {
+        background-color: $rosa;
+        color: $white;
+        border: solid $rosa 0.5px;
       }
     }
   }
