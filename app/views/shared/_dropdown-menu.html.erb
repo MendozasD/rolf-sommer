@@ -1,5 +1,4 @@
-<div id="menu-list" hidden>
-
+<div id="menu-list" class="animate__animated animate__slideInDown" hidden>
   <%# CLOSIN BUTTON %>
   <button class="close-bttn-dropdown" data-action="click->dropdown#hideMenu">X</button>
 
@@ -9,6 +8,5 @@
   <%= link_to "Kontakt", kontakt_path, class: 'link-menu-dropdown' %>
 
   <%# SUN BOTTOM ANIMATION %>
-  <%= embedded_svg('sun-gradient', class: 'sun-dropdown') %>
-
+  <%= cl_image_tag("rolf_sommer/sun-gradient_vn8shb.png", class: 'sun-dropdown animate__animated animate__slideInUp') %>
 </div>

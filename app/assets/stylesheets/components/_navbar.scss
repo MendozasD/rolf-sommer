@@ -126,12 +126,23 @@
         left: 0;
         width: 100%;
         height: calc(100vh - 70px);
-        background-color: currentColor;
+        background: linear-gradient(
+          0deg,
+          rgba(217, 235, 255, 1) 0%,
+          rgba(255, 255, 255, 1) 100%
+        );
+        animation-duration: 1s;
         .link-menu-dropdown {
           font-weight: 500;
-          font-size: 3rem;
-          color: white;
+          font-size: 2rem;
+          text-decoration: none;
           z-index: 1;
+          font-family: $logo-font-light;
+          padding: 10px 40px;
+          margin: 20px 0;
+          border: solid $blue 1px;
+          background-color: white;
+          border-radius: 50px;
         }
         .close-bttn-dropdown {
           position: inherit;
@@ -142,8 +153,9 @@
           position: absolute;
           height: 100vh;
           bottom: -500px;
-          animation: rotate 20s linear infinite;
+          animation: rotate 20s linear infinite 1.5s, slideInUp 0.5s;
           z-index: 0;
+          filter: drop-shadow(0px 0px 12px #000);
         }
       }
     }
