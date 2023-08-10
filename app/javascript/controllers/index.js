@@ -7,6 +7,9 @@ import { application } from "./application";
 import BorderController from "./border_controller";
 application.register("border", BorderController);
 
+import DropdownController from "./dropdown_controller";
+application.register("dropdown", DropdownController);
+
 import FilterController from "./filter_controller";
 application.register("filter", FilterController);
 

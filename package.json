@@ -6,6 +6,7 @@
     "@hotwired/turbo-rails": "^7.3.0",
     "@toon.rombaut/magnetic-elements": "^1.0.0",
     "bootstrap": "^5.3.0",
+    "stimulus-dropdown": "^2.1.0",
     "vanilla-marquee": "^1.1.2",
     "vanilla-tilt": "^1.8.0",
     "webpack": "^5.86.0",

@@ -1,0 +1,14 @@
+<div id="menu-list" hidden>
+
+  <%# CLOSIN BUTTON %>
+  <button class="close-bttn-dropdown" data-action="click->dropdown#hideMenu">X</button>
+
+  <%# DROPDOWN MENU LIST %>
+  <%= link_to "Work", work_path, class: 'link-menu-dropdown' %>
+  <%= link_to "Steckbrief", steckbrief_path, class: 'link-menu-dropdown' %>
+  <%= link_to "Kontakt", kontakt_path, class: 'link-menu-dropdown' %>
+
+  <%# SUN BOTTOM ANIMATION %>
+  <%= embedded_svg('sun-gradient', class: 'sun-dropdown') %>
+
+</div>
