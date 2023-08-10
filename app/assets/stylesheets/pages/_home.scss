@@ -1,124 +1,57 @@
 #main-box-home {
   display: flex;
-  justify-content: center;
-  height: calc(95vh - 70px);
-  width: 80vw;
+  flex-direction: column;
+  height: calc(100vh - 70px);
+  width: 100%;
   // CENTER
   margin: 0 auto;
-  #title-home {
-    display: none;
-    font-family: $logo-font-dark;
-    font-size: 3rem;
+  #main-foto-desktop {
+    width: 100%;
+    height: 85%;
+    object-fit: cover;
+    align-self: center;
   }
-  #text-foto-container {
-    height: 100%;
+  #profile-list {
+    position: absolute;
     display: flex;
-    #main-foto-desktop {
-      width: 100%;
-      height: 85%;
-      object-fit: cover;
-      align-self: center;
-    }
-    #profile-list {
-      position: absolute;
-      display: flex;
-      font-family: $logo-font-light;
-      line-height: 60px;
-      color: white;
-      padding: 30px;
-      font-size: 4rem;
-      margin: 0;
-      mix-blend-mode: difference;
-    }
-    #main-foto-mobile {
-      display: none;
-    }
+    font-family: $logo-font-light;
+    line-height: 60px;
+    color: white;
+    font-size: 4rem;
+    mix-blend-mode: difference;
+    padding: 20px 0 0 20px;
   }
   #greeting-home {
-    position: absolute;
-    bottom: 10px;
-    background-color: white;
-    width: 75%;
-    padding: 30px;
     line-height: 1;
-    border: solid 1px;
-    .greeting-home-box {
-      border: solid 1px;
-      position: inherit;
-      font-family: $logo-font-light;
-      font-size: 1.2rem;
-      background-color: rgb(216, 235, 255);
-      border-radius: 50px;
-      padding: 10px;
-    }
+    color: white;
+    mix-blend-mode: difference;
+    text-align: right;
+    padding: 0 20px;
     #guten-tag {
-      top: -20px;
-    }
-    #freue-mich {
-      bottom: -20px;
-      right: 10px;
-    }
-    #middle-p {
-      margin: 0;
+      position: relative;
+      font-family: $logo-font-light;
+      right: 0;
+      top: 0;
+      width: 100%;
+      display: inline-block;
+      font-size: 2rem;
     }
   }
 }
 
 @media (max-width: 800px) {
-  .main-box-home {
-    .title-home {
-      display: inline;
+  #main-box-home {
+    height: calc(100vh - 70px);
+    width: 100%;
+    #profile-list {
+      font-size: 3.5rem;
+    }
+    #main-foto-desktop {
+      height: 100%;
+    }
+    #greeting-home {
+      position: absolute;
+      bottom: 0;
     }
   }
 }
-
-//.main-box-home {
-// display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   width: 75vw;
-//   height: 75vh;
-//   filter: drop-shadow(0px 0px 15px #908686);
-//   &:hover {
-//     filter: drop-shadow(0px 0px 30px #908686);
-//   }
-//   .inside-foto {
-//     border-radius: 20px;
-//     width: 100%;
-//     height: 100%;
-//     object-fit: cover;
-//   }
-//   .text-box-home {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     position: fixed;
-//     height: 100%;
-//     width: 100%;
-//     color: $white;
-//     .main-title {
-//       position: fixed;
-//       align-self: center;
-//       white-space: nowrap;
-//       bottom: 0;
-//       font-family: $logo-font-dark;
-//       font-size: 7.5rem;
-//       letter-spacing: -3px;
-//       font-weight: 700;
-//     }
-//     .profile-list {
-//       display: flex;
-//       justify-content: space-between;
-//       width: 100%;
-//       font-size: 1rem;
-//       font-weight: 200;
-//       font-family: $logo-font-light;
-//       p {
-//         font-family: $logo-font-light;
-//         font-weight: bolder;
-//         margin: 0 40px;
-//         text-transform: uppercase;
-//         font-size: 1.8rem;
-//       }
-//     }
-//   }
