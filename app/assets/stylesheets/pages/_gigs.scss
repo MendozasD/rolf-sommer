@@ -9,6 +9,7 @@
   .listing-jobs {
     position: relative;
     border: solid 0.3px gray;
+    background-color: #fbeee0a1;
     border-radius: 20px;
     min-width: 300px;
     padding: 20px;
@@ -18,11 +19,34 @@
       font-size: 2rem;
       width: inherit;
     }
+    .role-col-jobs {
+      margin: 10px 0;
+      &::before {
+        content: "Role:";
+        margin-right: 5px;
+      }
+    }
     .sticker {
       position: absolute;
       right: 10px;
       bottom: 10px;
       width: 50px;
+    }
+    .datum-col-jobs,
+    .spielort-col-jobs {
+      width: fit-content;
+      padding: 0 10px;
+      text-align: center;
+      border: solid 1px gray;
+      border-radius: 20px;
+    }
+  }
+  .listing-jobs:hover,
+  .listing-jobs:focus {
+    svg {
+      filter: url(#shadow);
+      transform: rotate(-20deg) scale(1.5);
+      transition: transform ease 0.5s;
     }
   }
 }
@@ -45,21 +69,10 @@
       width: 100%;
       text-align: center;
     }
-    .role-col-jobs {
-      margin: 10px 0;
-      &::before {
-        content: "Role:";
-        margin-right: 5px;
-      }
-    }
+
     .datum-col-jobs,
     .spielort-col-jobs {
       margin: 0 auto;
-      width: fit-content;
-      padding: 0 10px;
-      text-align: center;
-      border: solid 0.5px gray;
-      border-radius: 20px;
     }
   }
 }

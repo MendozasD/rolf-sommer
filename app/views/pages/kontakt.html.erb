@@ -1,12 +1,17 @@
-<div class="box">
-  <div id="kontakt-container">
-    <%= cl_image_tag("rolf_sommer/kontakt-page_bvrrzx", id: 'kontack-foto', class: 'kontakt-pic-box') %>
-    <div id="kontakt-link-box">
-      <%= mail_to 'info@rolfsommer.net', id:'link-box-top', class: 'link-1 main-link-top'%>
-      <%= link_to 'Facebook', 'https://www.facebook.com/rolf.sommer.94', class: 'link-1', target: '_blank'%>
-      <%= link_to 'Instagram', 'https://www.instagram.com/rolf_sommer_/', class: 'link-1', target: '_blank'%>
-      <%= link_to 'Web Design :: David Mendoza', 'http://davidmendoza.ch/', class: 'link-1', target: '_blank'%>
-      <%= link_to 'Fotograf :: Jon Trachsel', 'https://jontrachsel.ch/', class: 'link-1', target: '_blank'%>
-    </div>
+<div id="kontakt-container" class="box">
+  <%= mail_to "info@rolfsommer.net", subject: "Kontaktieren von Website", id:'contact-me-bttn' do%>
+    <p>Kontaktieren mich! <span id='mail-icon'><%= embedded_svg("mail") %></span></p>
+  <% end %>
+  <div id="icons-kontakt">
+    <%= link_to "https://www.facebook.com/rolf.sommer.94", target: '_blank' do %>
+      <%= embedded_svg("fb", class: 'icon-kontakt') %>
+    <% end %>
+    <%= link_to "https://www.instagram.com/rolf_sommer_/", target: '_blank' do %>
+      <%= embedded_svg("ig", class: 'icon-kontakt') %>
+    <% end %>
+  </div>
+  <div id="link-box-bottom">
+    <%= link_to 'Web Design :: David Mendoza', 'http://davidmendoza.ch/', class: 'link-1', target: '_blank'%>
+    <%= link_to 'Fotograf :: Jon Trachsel', 'https://jontrachsel.ch/', class: 'link-1', target: '_blank'%>
   </div>
 </div>

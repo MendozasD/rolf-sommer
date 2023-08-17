@@ -1,5 +1,5 @@
 <section id="bg-general">
-  <% if !current_page?(root_path) %>
-    <%= embedded_svg('sun-gradient', class: 'sun-gradient rotate') %>
+  <% if !current_page?(root_path && kontakt_path) %>
+    <%= embedded_svg('sun-gradient', class: 'sun-gradient rotate animate__animated animate__rotateIn') %>
   <% end %>
 </section>

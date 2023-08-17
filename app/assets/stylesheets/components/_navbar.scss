@@ -40,7 +40,6 @@
       font-family: $body;
       font-size: 1.4rem;
       font-weight: 300;
-      font-family: $logo-font-light;
       margin: 0 0.5rem;
       padding: 10px 15px;
       background: none;
@@ -51,8 +50,8 @@
           background-color: black;
           border-radius: 50%;
           position: absolute;
-          width: 5px;
-          height: 5px;
+          width: 7px;
+          height: 7px;
           right: 50%;
           bottom: 0;
         }
@@ -61,15 +60,14 @@
     .active {
       text-decoration: none;
       button {
-        font-family: $logo-font-dark;
         position: relative;
         &::before {
           content: "";
           background-color: black;
           border-radius: 50%;
           position: absolute;
-          width: 5px;
-          height: 5px;
+          width: 7px;
+          height: 7px;
           right: 50%;
           bottom: 0;
         }
@@ -156,7 +154,7 @@
           position: absolute;
           height: 100vh;
           bottom: -500px;
-          animation: rotate 20s linear infinite 1.5s, slideInUp 0.7s;
+          animation: rotate 20s linear infinite 1.5s, zoomIn 0.7s;
           z-index: 0;
           filter: drop-shadow(0px 0px 12px #000);
         }
