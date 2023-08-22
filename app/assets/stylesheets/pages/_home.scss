@@ -1,20 +1,11 @@
 #main-box-home {
-  display: flex;
-  flex-direction: column;
   height: calc(100vh - 70px);
   width: 100%;
-  // CENTER
   margin: 0 auto;
-  #main-foto-desktop {
-    width: 100%;
-    height: 85%;
-    object-fit: cover;
-    align-self: center;
-  }
   #profile-list {
     position: absolute;
     display: flex;
-    font-family: $logo-font-light;
+    font-family: $logo-font-dark;
     line-height: 60px;
     color: white;
     font-size: 4rem;
@@ -22,17 +13,14 @@
     padding: 20px 0 0 20px;
   }
   #greeting-home {
+    position: absolute;
+    bottom: 10px;
     line-height: 1;
     color: white;
     mix-blend-mode: difference;
-    text-align: right;
     padding: 0 20px;
     #guten-tag {
-      position: relative;
       font-family: $logo-font-light;
-      font-weight: bolder;
-      right: 0;
-      top: 0;
       width: 100%;
       display: inline-block;
       font-size: 2rem;
@@ -45,10 +33,7 @@
     height: calc(100vh - 70px);
     width: 100%;
     #profile-list {
-      font-size: 3.5rem;
-    }
-    #main-foto-desktop {
-      height: 100%;
+      font-size: 3rem;
     }
     #greeting-home {
       position: absolute;

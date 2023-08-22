@@ -1,4 +1,5 @@
 #bg-general {
+  display: flex;
   position: fixed;
   overflow: hidden;
   top: 0;
@@ -6,16 +7,24 @@
   z-index: -2;
   height: 100vh;
   width: 100vw;
-  background-color: #e3e1db;
-  .sun-gradient {
-    opacity: 0.7;
-    animation: rotate 20s linear infinite 1.5s, rotateIn 5s;
+  background: #e3e1db;
+  background-image: url(https://res.cloudinary.com/dm4hnoj7v/image/upload/v1692459406/rolf_sommer/noise_cwvoaj.png);
+  #main-foto-home {
+    margin: auto;
+    width: 70vw;
+    height: calc(70vh - 70px);
+    object-fit: cover;
   }
 }
 
 @media (max-width: 800px) {
-  .sun-gradient {
-    display: none;
+  #bg-general {
+    #main-foto-home {
+      margin: 70px 0 0 0;
+      height: calc(100vh - 70px);
+      border-radius: 50px 50px 0 0;
+      width: 100vw;
+    }
   }
 }
 

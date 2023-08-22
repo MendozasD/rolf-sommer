@@ -19,6 +19,7 @@
       letter-spacing: -3px;
       white-space: nowrap;
       font-size: 3rem;
+      color: black;
       a {
         color: black;
       }
@@ -38,7 +39,7 @@
       position: relative;
       list-style-type: none;
       font-family: $body;
-      font-size: 1.4rem;
+      font-size: 1rem;
       font-weight: 300;
       margin: 0 0.5rem;
       padding: 10px 15px;
@@ -121,25 +122,31 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        background: #e3e1db;
+        background-image: url(https://res.cloudinary.com/dm4hnoj7v/image/upload/v1692459406/rolf_sommer/noise_cwvoaj.png);
         left: 0;
         width: 100%;
         height: calc(100vh - 60px);
-        background: linear-gradient(
-          0deg,
-          rgba(255, 255, 255, 1) 0%,
-          rgba(227, 225, 219, 1) 100%
-        );
+        #id-link-dropdown {
+          &::before {
+            content: url(https://res.cloudinary.com/dm4hnoj7v/image/upload/c_scale,w_20/v1686929728/rolf_sommer/sun_icon_qzn60f.png);
+            position: relative;
+            left: -10px;
+            bottom: 5px;
+            filter: drop-shadow(0px 0px 5px #000);
+          }
+        }
         .link-menu-dropdown {
-          font-weight: 500;
-          font-size: 2rem;
+          color: black;
+          font-weight: 300;
+          font-size: 3rem;
           text-decoration: none;
           z-index: 1;
-          font-family: $logo-font-light;
-          padding: 10px 40px;
+          padding: 0 40px;
           margin: 20px 0;
-          border: solid $blue 1px;
-          background-color: white;
-          border-radius: 50px;
+          width: fit-content;
+          text-align: center;
+          border-bottom: solid 1px;
         }
         .close-bttn-dropdown {
           position: inherit;
@@ -157,6 +164,7 @@
           animation: rotate 20s linear infinite 1.5s, zoomIn 0.7s;
           z-index: 0;
           filter: drop-shadow(0px 0px 12px #000);
+          opacity: 0.5;
         }
       }
     }

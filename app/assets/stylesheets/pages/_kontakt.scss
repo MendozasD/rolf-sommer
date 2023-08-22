@@ -1,47 +1,31 @@
 #kontakt-container {
-  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  height: calc(97vh - 70px);
-  width: 95vw;
-  #contact-me-bttn {
-    width: 95vw;
-    overflow: hidden;
-    text-decoration: none;
-    border-bottom: solid 1px;
-    p {
-      color: black;
-      font-family: $logo-font-light;
-      font-size: 3.5rem;
-      white-space: nowrap;
-      margin: 0 0 0 10px;
-      #mail-icon {
-        position: relative;
-        bottom: 5px;
-        svg {
-          transform: rotate(340deg);
-          stroke: #000000;
-          stroke-width: 1;
-        }
-      }
-    }
-    &:hover {
-      background-color: $blue;
-      p {
-        color: white;
-        #mail-icon {
-          svg {
-            stroke: white;
-          }
-        }
-      }
-    }
+  align-items: center;
+  #kontakt-foto-container {
+    width: 90vw;
+    height: calc(85vh - 70px);
+    object-fit: cover;
   }
-  #icons-kontakt {
-    margin: 10px 0;
-    .icon-kontakt {
-      margin: 0 10px;
+  #link-kontakt-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    #kontakt-me-bttn {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: black;
+      font-size: 3rem;
+      font-family: $logo-font-light;
+    }
+    #icons-kontakt {
+      margin: 10px 0;
+      a {
+        margin: 0 10px;
+        text-decoration: none;
+      }
     }
   }
   #link-box-bottom {
@@ -51,35 +35,22 @@
   }
 }
 
-// SVG ELEMENT FOR MAIL-BUTTON
-#round-mail {
-  animation: rotate 20s linear infinite, rotateIn;
-  .bg-lines {
-    fill: none;
-    stroke: black;
-    stroke-width: 0.5px;
-    stroke-linecap: round;
-    stroke-miterlimit: 10;
-    stroke-dasharray: 65.3571, 65.3571;
-  }
-  #mail-round-path {
-    fill: $orange;
-    opacity: 0.5;
-    &:hover {
-      opacity: 1;
-    }
-  }
-  #round-text {
-    font-size: 75px;
-    font-family: $logo-font-light;
-  }
-}
-
 @media (max-width: 800px) {
   #kontakt-container {
-    #contact-me-bttn {
-      p {
-        font-size: 2.3rem;
+    justify-content: flex-end;
+    #link-kontakt-container {
+      svg {
+        width: 30px;
+      }
+      #kontakt-me-bttn {
+        font-size: 1.8rem;
+      }
+      #icons-kontakt {
+        a {
+          svg {
+            width: 30px;
+          }
+        }
       }
     }
   }

@@ -8,8 +8,7 @@
   justify-content: center;
   .listing-jobs {
     position: relative;
-    border: solid 0.3px gray;
-    background-color: #fbeee0a1;
+    border: solid 0.5px gray;
     border-radius: 20px;
     min-width: 300px;
     padding: 20px;
@@ -39,6 +38,7 @@
       text-align: center;
       border: solid 1px gray;
       border-radius: 20px;
+      margin: 5px 0;
     }
   }
   .listing-jobs:hover,

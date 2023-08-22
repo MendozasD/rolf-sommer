@@ -3,9 +3,10 @@
   <div class="close-bttn-dropdown" data-action="click->dropdown#hideMenu">X</div>
 
   <%# DROPDOWN MENU LIST %>
-  <%= link_to "Work", work_path, class: 'link-menu-dropdown' %>
-  <%= link_to "Steckbrief", steckbrief_path, class: 'link-menu-dropdown' %>
-  <%= link_to "Kontakt", kontakt_path, class: 'link-menu-dropdown' %>
+  <%= link_to "Startseite", root_path, class: 'link-menu-dropdown', id: id_link_dropdown(root_path) %>
+  <%= link_to "Work", work_path, class: 'link-menu-dropdown', id: id_link_dropdown(work_path) %>
+  <%= link_to "Steckbrief", steckbrief_path, class: 'link-menu-dropdown', id: id_link_dropdown(steckbrief_path) %>
+  <%= link_to "Kontakt", kontakt_path, class: 'link-menu-dropdown', id: id_link_dropdown(kontakt_path) %>
 
   <%# SUN BOTTOM ANIMATION %>
   <%= cl_image_tag("rolf_sommer/sun-gradient_vn8shb.png", class: 'sun-dropdown animate__animated animate__slideInUp') %>
