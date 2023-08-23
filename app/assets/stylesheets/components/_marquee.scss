@@ -1,0 +1,48 @@
+.kommende-card {
+  .gigs-row {
+    .main-marquee {
+      display: flex;
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      opacity: 0;
+      transition: opacity 0.2s;
+      .marquee__first,
+      .marquee__second {
+        animation: scroll 20s linear infinite;
+        display: flex;
+        bottom: 10px;
+        animation-play-state: paused;
+        font-size: 3rem;
+        span {
+          white-space: nowrap;
+          font-family: $logo-font-light;
+          padding: 0 30px;
+        }
+      }
+    }
+    &:hover {
+      .piece-title {
+        opacity: 0;
+        transition: opacity 0.4s;
+      }
+      .main-marquee {
+        transition: opacity 0.4s;
+        opacity: 1;
+        .marquee__first,
+        .marquee__second {
+          animation-play-state: running;
+        }
+      }
+    }
+  }
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}

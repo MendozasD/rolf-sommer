@@ -19,6 +19,9 @@ application.register("magnetic-elements", MagneticElementsController)
 import MailButtonController from "./mail_button_controller"
 application.register("mail-button", MailButtonController)
 
+import MarqueeController from "./marquee_controller"
+application.register("marquee", MarqueeController)
+
 import ScrollController from "./scroll_controller"
 application.register("scroll", ScrollController)
 

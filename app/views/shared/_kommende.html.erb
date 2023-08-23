@@ -3,17 +3,38 @@
   <div class="kommende-card">
     <% @gig.where(premiered: false).each do |g| %>
       <% if g.url.present? && g.url != false %>
-        <%= link_to g.url, class: 'gigs-row', target: '_blank' do %>
-          <div class="datum-col commom-col-kommende"><%= l(g.start_date, format: '%d. %b. %Y') || "" %></div>
-          <div class="spielort-col commom-col-kommende"><%= g.location || "" %></div>
-          <div class="stuck-col piece-title"><%= g.piece %></div>
-          <%= embedded_svg(sticker_srt(g), class: 'sticker') %>
+        <%= link_to g.url, target: '_blank' do %>
+          <section class="gigs-row" data-controller="marquee" data-action="mouseover->marquee#addMarquee">
+            <div class="datum-col commom-col-kommende"><%= l(g.start_date, format: '%d. %b. %Y') || "" %></div>
+            <div class="spielort-col commom-col-kommende"><%= g.location || "" %></div>
+            <div class="stuck-col piece-title" data-marquee-target="piece"><%= g.piece %></div>
+            <div class="marquee__inner" aria-hidden="true">
+              <span><%= g.piece %></span>
+              <span><%= g.piece %></span>
+              <span><%= g.piece %></span>
+              <span><%= g.piece %></span>
+              <span><%= g.piece %></span>
+            </div>
+            <%= embedded_svg(sticker_srt(g), class: 'sticker') %>
+          </section>
         <% end %>
       <% else %>
-        <section class="gigs-row">
+        <section class="gigs-row" data-controller="marquee" data-action="mouseover->marquee#addMarquee">
           <div class="datum-col commom-col-kommende"><%= l(g.start_date, format: '%d. %b. %Y') || "" %></div>
           <div class="spielort-col commom-col-kommende"><%= g.location || "" %></div>
-          <div class="stuck-col piece-title"><%= g.piece %></div>
+          <div class="stuck-col piece-title" data-marquee-target="piece"><%= g.piece %></div>
+          <div class="main-marquee">
+            <div class="marquee__first" aria-hidden="true">
+                <span><%= g.piece %></span>
+                <span><%= g.piece %></span>
+                <span><%= g.piece %></span>
+            </div>
+            <div class="marquee__second" aria-hidden="true">
+                <span><%= g.piece %></span>
+                <span><%= g.piece %></span>
+                <span><%= g.piece %></span>
+            </div>
+          </div>
           <%= embedded_svg(sticker_srt(g), class: 'sticker') %>
         </section>
       <% end %>
