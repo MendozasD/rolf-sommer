@@ -46,3 +46,19 @@
     transform: translateX(-100%);
   }
 }
+
+@media (max-width: 800px) {
+  .kommende-card {
+    .gigs-row {
+      .main-marquee {
+        .marquee__first,
+        .marquee__second {
+          font-size: 2rem;
+          span {
+            padding: 0 20px;
+          }
+        }
+      }
+    }
+  }
+}

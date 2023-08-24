@@ -6,14 +6,21 @@
         <%= link_to g.url, target: '_blank' do %>
           <section class="gigs-row" data-controller="marquee" data-action="mouseover->marquee#addMarquee">
             <div class="datum-col commom-col-kommende"><%= l(g.start_date, format: '%d. %b. %Y') || "" %></div>
-            <div class="spielort-col commom-col-kommende"><%= g.location || "" %></div>
+            <% if g.location %>
+              <div class="spielort-col commom-col-kommende"><%= g.location %></div>
+            <% end %>
             <div class="stuck-col piece-title" data-marquee-target="piece"><%= g.piece %></div>
-            <div class="marquee__inner" aria-hidden="true">
-              <span><%= g.piece %></span>
-              <span><%= g.piece %></span>
-              <span><%= g.piece %></span>
-              <span><%= g.piece %></span>
-              <span><%= g.piece %></span>
+            <div class="main-marquee">
+              <div class="marquee__first" aria-hidden="true">
+                  <span><%= g.piece %></span>
+                  <span><%= g.piece %></span>
+                  <span><%= g.piece %></span>
+              </div>
+              <div class="marquee__second" aria-hidden="true">
+                  <span><%= g.piece %></span>
+                  <span><%= g.piece %></span>
+                  <span><%= g.piece %></span>
+              </div>
             </div>
             <%= embedded_svg(sticker_srt(g), class: 'sticker') %>
           </section>
@@ -21,7 +28,9 @@
       <% else %>
         <section class="gigs-row" data-controller="marquee" data-action="mouseover->marquee#addMarquee">
           <div class="datum-col commom-col-kommende"><%= l(g.start_date, format: '%d. %b. %Y') || "" %></div>
-          <div class="spielort-col commom-col-kommende"><%= g.location || "" %></div>
+          <% if g.location %>
+            <div class="spielort-col commom-col-kommende"><%= g.location %></div>
+          <% end %>
           <div class="stuck-col piece-title" data-marquee-target="piece"><%= g.piece %></div>
           <div class="main-marquee">
             <div class="marquee__first" aria-hidden="true">
