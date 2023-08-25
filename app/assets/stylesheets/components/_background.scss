@@ -9,12 +9,7 @@
   width: 100vw;
   background: #e3e1db;
   background-image: url(https://res.cloudinary.com/dm4hnoj7v/image/upload/v1692459406/rolf_sommer/noise_cwvoaj.png);
-  #main-foto-home {
-    margin: auto;
-    width: 70vw;
-    height: calc(70vh - 70px);
-    object-fit: cover;
-  }
+  justify-content: center;
 }
 
 @media (max-width: 800px) {

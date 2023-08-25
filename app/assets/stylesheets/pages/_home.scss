@@ -1,43 +1,90 @@
 #main-box-home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   height: calc(100vh - 70px);
   width: 100%;
   margin: 0 auto;
+  align-items: center;
   #profile-list {
-    position: absolute;
     display: flex;
-    font-family: $logo-font-dark;
+    font-family: $logo-font-light;
     line-height: 60px;
     color: white;
     font-size: 4rem;
     mix-blend-mode: difference;
-    padding: 20px 0 0 20px;
+    width: 80%;
   }
-  #greeting-home {
-    position: absolute;
-    bottom: 10px;
-    line-height: 1;
-    color: white;
-    mix-blend-mode: difference;
-    padding: 0 20px;
-    #guten-tag {
-      font-family: $logo-font-light;
-      width: 100%;
-      display: inline-block;
-      font-size: 2rem;
+  #main-foto-home {
+    width: 100%;
+    height: calc(60vh - 30px);
+    object-fit: cover;
+    border-radius: 220px;
+  }
+  #home-description {
+    display: flex;
+    .marks {
+      background-color: none;
+      width: 100px;
+      height: fit-content;
+    }
+    #mark-left {
+      align-self: flex-end;
+    }
+    #mark-right {
+      rotate: 180deg;
+    }
+    #greeting-home {
+      width: 80%;
+      line-height: 1;
+      color: black;
+      padding: 0 20px;
+      font-size: 1.3rem;
+      columns: 2;
+      font-weight: 300;
+      p {
+        color: white;
+        mix-blend-mode: difference;
+      }
+      span {
+        text-decoration: underline solid $orange 5px;
+        font-weight: bolder;
+      }
     }
   }
 }
 
 @media (max-width: 800px) {
   #main-box-home {
-    height: calc(100vh - 70px);
-    width: 100%;
+    justify-content: space-between;
+    height: calc(100vh - 90px);
     #profile-list {
-      font-size: 3rem;
+      width: 100%;
+      font-size: 2.5rem;
+      font-family: $logo-font-dark;
+      line-height: 30px;
+      padding: 10px 0 0 10px;
     }
-    #greeting-home {
-      position: absolute;
-      bottom: 0;
+    #main-foto-home {
+      border-radius: 50%;
+      height: 350px;
+      width: 350px;
+      z-index: -1;
+    }
+    #home-description {
+      #greeting-home {
+        text-align: center;
+        width: 90%;
+        align-self: center;
+        padding: 0;
+        font-size: 1.1rem;
+        columns: 1;
+        margin: 0 auto;
+        padding: 0 10px;
+      }
+      .marks {
+        display: none;
+      }
     }
   }
 }
