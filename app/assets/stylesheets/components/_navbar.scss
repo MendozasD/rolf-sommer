@@ -24,8 +24,9 @@
         color: black;
       }
     }
-    .sun-logo {
+    #sun-logo {
       display: block;
+      width: 40px;
       align-self: center;
       animation: rotate 12s linear infinite;
     }
@@ -93,7 +94,7 @@
 @media (max-width: 800px) {
   .nav-bar {
     #logo {
-      .sun-logo {
+      #sun-logo {
         display: none;
       }
     }
@@ -123,16 +124,18 @@
         align-items: center;
         justify-content: center;
         background: #e3e1db;
-        background-image: url(https://res.cloudinary.com/dm4hnoj7v/image/upload/v1692459406/rolf_sommer/noise_cwvoaj.png);
+        background-image: url(png/noise.png);
         left: 0;
         width: 100%;
         height: calc(100vh - 60px);
         #id-link-dropdown {
           &::before {
-            content: url(https://res.cloudinary.com/dm4hnoj7v/image/upload/c_scale,w_20/v1686929728/rolf_sommer/sun_icon_qzn60f.png);
+            content: url(svg/sun_icon.svg);
             position: relative;
             left: -10px;
             bottom: 5px;
+            display: inline-block;
+            width: 18px;
             filter: drop-shadow(0px 0px 5px #000);
           }
         }

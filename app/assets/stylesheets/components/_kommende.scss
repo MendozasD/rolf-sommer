@@ -1,3 +1,9 @@
+// Animating back after hover! --- DO NOT DELETE ---
+svg {
+  transform: rotate(0) scale(1);
+  transition: transform ease 0.5s;
+}
+
 .kommende-card {
   margin: 0 auto;
   width: 90%;
@@ -56,7 +62,6 @@
 
 .gigs-row:hover,
 .gigs-row:focus {
-  --gap: 1rem;
   // Glass BG
   background: rgba(255, 255, 255, 0.2);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -71,16 +76,6 @@
     filter: url(#shadow);
     transform: rotate(-20deg) scale(1.5);
     transition: transform ease 0.5s;
-  }
-}
-
-// KEYFRAMES
-@keyframes scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(calc(-100% - var(--gap)));
   }
 }
 
@@ -108,24 +103,4 @@
       }
     }
   }
-}
-
-// -------UNUSED STYLING---------
-
-// @keyframes marquee {
-//   from {
-//     transform: translateX(0);
-//   }
-//   to {
-//     transform: translateX(-50%);
-//   }
-// }
-
-// .piece-title {
-//   animation: scroll 10s linear infinite;
-// }
-
-svg {
-  transform: rotate(0) scale(1);
-  transition: transform ease 0.5s;
 }

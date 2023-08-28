@@ -1,7 +1,7 @@
 <nav class="nav-bar" data-controller="scroll" data-scroll-target="navbar">
   <%= link_to root_path, id: 'logo' do %>
     <div class="logo-letters">Rolf Sommer &nbsp</div>
-    <%= cl_image_tag("https://res.cloudinary.com/dm4hnoj7v/image/upload/c_scale,w_40/v1686929728/rolf_sommer/sun_icon_qzn60f.png", class: "sun-logo")%>
+    <%= image_tag('svg/sun_icon.svg', id: "sun-logo") %>
   <% end %>
 
   <div class="main-menu" data-controller="magnetic-elements">
