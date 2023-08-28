@@ -4,14 +4,14 @@
   </div>
   <div id="link-kontakt-container">
     <%= link_to "info@rolfsommer.net", subject: "Kontaktieren von Website", id: "kontakt-me-bttn" do %>
-      <%= embedded_svg('mail', class: 'icon-kontakt') %>Kontaktiere mich!
+      <%= image_tag('svg/mail-icon', class: 'icon-kontakt') %>Kontaktiere mich!
     <% end %>
     <div id="icons-kontakt">
       <%= link_to "https://www.facebook.com/rolf.sommer.94", target: '_blank' do %>
-        <%= embedded_svg("fb", class: 'icon-kontakt') %>
+        <%= image_tag("fb", class: 'icon-kontakt') %>
       <% end %>
       <%= link_to "https://www.instagram.com/rolf_sommer_/", target: '_blank' do %>
-        <%= embedded_svg("ig", class: 'icon-kontakt') %>
+        <%= image_tag("ig", class: 'icon-kontakt') %>
       <% end %>
     </div>
   </div>

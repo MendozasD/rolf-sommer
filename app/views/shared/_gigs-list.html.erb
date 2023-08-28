@@ -15,20 +15,20 @@
             <div class="role-col-jobs jobs-same-class"><%= g.role %></div>
             <div class="spielort-col-jobs jobs-same-class"><%= g.location %></div>
             <div class="datum-col-jobs"><%= g.start_date.strftime("%Y") %></div>
-            <%= embedded_svg(sticker_srt(g), class: 'sticker') %>
+            <%= image_tag(sticker_srt(g), class: 'sticker') %>
           </section>
         <% elsif g.director %>
           <section class="listing-jobs director-list" data-filter-target="directorRow">
             <div class="stuck-col-jobs"><%= g.piece %></div>
             <div class="spielort-col-jobs jobs-same-class"><%= g.location %></div>
             <div class="datum-col-jobs"><%= g.start_date.strftime("%Y") %></div>
-            <%= embedded_svg(sticker_srt(g), class: 'sticker') %>
+            <%= image_tag(sticker_srt(g), class: 'sticker') %>
           </section>
         <% elsif g.texter %>
           <section class="listing-jobs texter-list" data-filter-target="texterRow">
             <div class="stuck-col-jobs"><%= g.piece %></div>
             <div class="datum-col-jobs"><%= g.start_date.strftime("%Y") %></div>
-            <%= embedded_svg(sticker_srt(g), class: 'sticker') %>
+            <%= image_tag(sticker_srt(g), class: 'sticker') %>
           </section>
         <% end %>
       <% end %>

@@ -19,12 +19,18 @@
       color: black;
       font-size: 3rem;
       font-family: $logo-font-light;
+      .icon-kontakt {
+        width: 50px;
+      }
     }
     #icons-kontakt {
       margin: 10px 0;
       a {
         margin: 0 10px;
         text-decoration: none;
+        .icon-kontakt {
+          width: 50px;
+        }
       }
     }
   }
@@ -44,10 +50,13 @@
       }
       #kontakt-me-bttn {
         font-size: 1.8rem;
+        .icon-kontakt {
+          width: 30px;
+        }
       }
       #icons-kontakt {
         a {
-          svg {
+          .icon-kontakt {
             width: 30px;
           }
         }

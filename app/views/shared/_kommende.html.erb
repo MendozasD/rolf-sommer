@@ -22,7 +22,7 @@
                   <span><%= g.piece %></span>
               </div>
             </div>
-            <%= embedded_svg(sticker_srt(g), class: 'sticker') %>
+            <%= image_tag(sticker_srt(g), class: 'sticker') %>
           </section>
         <% end %>
       <% else %>
@@ -44,7 +44,7 @@
                 <span><%= g.piece %></span>
             </div>
           </div>
-          <%= embedded_svg(sticker_srt(g), class: 'sticker') %>
+          <%= image_tag(sticker_srt(g), class: 'sticker') %>
         </section>
       <% end %>
     <% end %>
