@@ -8,6 +8,9 @@ gem "devise"
 gem 'actionmailer', '~> 7.0', '>= 7.0.5'
 gem 'rails_admin', '~> 3.1', '>= 3.1.2'
 
+# Changed from sglite3 to pg to deploy [https://devcenter.heroku.com/articles/sqlite3]
+gem "pg"
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.5"
 
@@ -15,7 +18,7 @@ gem "rails", "~> 7.0.5"
 gem "sprockets-rails"
 
 # Use sqlite3 as the database for Active Record
-gem "sqlite3", "~> 1.4"
+# gem "sqlite3", "~> 1.4"
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
