@@ -14,15 +14,15 @@
     margin: 0 5px;
     background-color: transparent;
     border-radius: 30px;
+    color: black;
   }
   .btn-border-active {
     color: white;
     border: solid $rosa 1px;
     background-color: $rosa;
-    font-style: italic;
   }
   .btn-border-off {
-    border: solid $blue 0.5px;
+    border: solid gray 1px;
   }
 }
 

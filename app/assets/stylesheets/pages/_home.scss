@@ -28,7 +28,6 @@
     font-size: 1.3rem;
     columns: 2;
     font-weight: 300;
-    border-radius: 50px;
     span {
       text-decoration: underline orange 2px;
     }
@@ -37,7 +36,6 @@
 
 @media (max-width: 800px) {
   #main-box-home {
-    position: fixed;
     justify-content: space-between;
     height: calc(100vh - 70px);
     #profile-list {
@@ -54,7 +52,7 @@
       padding: 0;
       font-size: 1.1rem;
       columns: 1;
-      margin: 0 auto;
+      margin-bottom: 50px;
       padding: 0 10px;
     }
   }
