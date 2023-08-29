@@ -10,24 +10,9 @@
   background: #e3e1db;
   background-image: url(https://res.cloudinary.com/dm4hnoj7v/image/upload/v1692459406/rolf_sommer/noise_cwvoaj.png);
   justify-content: center;
-}
-
-@media (max-width: 800px) {
-  #bg-general {
-    #main-foto-home {
-      margin: 70px 0 0 0;
-      height: calc(100vh - 70px);
-      border-radius: 50px 50px 0 0;
-      width: 100vw;
-    }
-  }
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
+  #main-foto-home {
+    width: 100vw;
+    object-fit: cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   }
 }
