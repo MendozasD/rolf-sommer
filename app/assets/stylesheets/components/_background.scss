@@ -13,6 +13,16 @@
   #main-foto-home {
     width: 100vw;
     object-fit: cover;
+    // mix-blend-mode: luminosity;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

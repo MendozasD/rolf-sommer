@@ -6,6 +6,11 @@ module ApplicationHelper
     ''
   end
 
+  def scroll_class?(test_path)
+    return 'scrolled' if request.path == test_path
+    ''
+  end
+
   def id_link_dropdown(test_path)
     return 'id-link-dropdown' if request.path == test_path
     ''

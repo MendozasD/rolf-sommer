@@ -1,4 +1,4 @@
-.nav-bar {
+#nav-bar {
   position: fixed;
   display: flex;
   justify-content: space-between;
@@ -16,9 +16,8 @@
       text-align: center;
       margin: 0;
       font-family: $logo-font-light;
-      letter-spacing: -3px;
       white-space: nowrap;
-      font-size: 3rem;
+      font-size: 2rem;
       color: black;
       a {
         color: black;
@@ -83,16 +82,18 @@
 
 .scrolled {
   /* GLASS BACKGROUND */
-  background: rgba(255, 255, 255, 0.52);
-  border-radius: 0 0 16px 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(8.7px);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.9009978991596639) 100%
+  );
+  backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(8.7px);
   transition: all ease 1s;
 }
 
 @media (max-width: 800px) {
-  .nav-bar {
+  #nav-bar {
     #logo {
       #sun-logo {
         display: none;

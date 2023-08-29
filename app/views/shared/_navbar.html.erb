@@ -1,4 +1,4 @@
-<nav class="nav-bar" data-controller="scroll" data-scroll-target="navbar">
+<nav id="nav-bar" class="<%=scroll_class?(root_path)%>" data-controller="scroll" data-scroll-target="navbar">
   <%= link_to root_path, id: 'logo' do %>
     <div class="logo-letters">Rolf Sommer &nbsp</div>
     <%= image_tag('sun_icon.png', id: "sun-logo") %>
