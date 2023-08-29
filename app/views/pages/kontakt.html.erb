@@ -3,9 +3,7 @@
     <%= image_tag('photos/finale_kari-8.jpg', id: 'kontakt-foto-container') %>
   </div>
   <div id="link-kontakt-container">
-    <%= link_to "info@rolfsommer.net", subject: "Kontaktieren von Website", id: "kontakt-me-bttn" do %>
-      <%= image_tag('icon-m.png', class: 'icon-kontakt') %>Kontaktiere mich!
-    <% end %>
+    <%= mail_to 'info@rolfsommer.net', 'Kontaktiere mich!', id: "kontakt-me-bttn", target: '_blank' %>
     <div id="icons-kontakt">
       <%= link_to "https://www.facebook.com/rolf.sommer.94", target: '_blank' do %>
         <%= image_tag("icon-f.png", class: 'icon-kontakt') %>
