@@ -19,11 +19,11 @@ module ApplicationHelper
   #FILTER SVG STICKERS FOR KOMMENDE SECTION
   def sticker_srt(g)
     if g.actor
-      'actor-sticker'
+      'actor-sticker.png'
     elsif g.director
-      'director-sticker'
+      'director-sticker.png'
     else g.texter
-      'texter-sticker'
+      'texter-sticker.png'
     end
   end
 end
