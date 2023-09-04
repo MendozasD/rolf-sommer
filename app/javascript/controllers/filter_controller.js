@@ -29,27 +29,25 @@ function showThem(className) {
 }
 
 export default class extends Controller {
-  static targets = ["actorRow", "directorRow", "texterRow"];
-
   showAll() {
     showThem("listing-jobs");
   }
 
   showActor() {
+    showThem("listing-jobs");
     hideTexter("texter-list");
     hideDirector("director-list");
-    this.actorRowTarget.hidden = false;
   }
 
   showDirector() {
+    showThem("listing-jobs");
     hideActor("actor-list");
     hideTexter("texter-list");
-    this.directorRowTarget.hidden = false;
   }
 
   showTexter() {
+    showThem("listing-jobs");
     hideDirector("director-list");
     hideActor("actor-list");
-    this.texterRowTarget.hidden = false;
   }
 }
