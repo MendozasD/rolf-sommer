@@ -10,7 +10,7 @@
       <%# Rendering the list of gigs with their filtering buttons %>
       <% @gig.where(premiered: true).order(start_date: :desc).each do |g| %>
         <% if g.actor %>
-          <section class="listing-jobs actor-list" data-filter-target="actorRow">
+          <section class="listing-jobs actor-list">
             <div class="stuck-col-jobs"><%= g.piece %></div>
             <div class="role-col-jobs jobs-same-class"><%= g.role %></div>
             <div class="spielort-col-jobs jobs-same-class"><%= g.location %></div>
@@ -18,14 +18,14 @@
             <%= image_tag(sticker_srt(g), class: 'sticker') %>
           </section>
         <% elsif g.director %>
-          <section class="listing-jobs director-list" data-filter-target="directorRow">
+          <section class="listing-jobs director-list">
             <div class="stuck-col-jobs"><%= g.piece %></div>
             <div class="spielort-col-jobs jobs-same-class"><%= g.location %></div>
             <div class="datum-col-jobs"><%= g.start_date.strftime("%Y") %></div>
             <%= image_tag(sticker_srt(g), class: 'sticker') %>
           </section>
         <% elsif g.texter %>
-          <section class="listing-jobs texter-list" data-filter-target="texterRow">
+          <section class="listing-jobs texter-list">
             <div class="stuck-col-jobs"><%= g.piece %></div>
             <div class="datum-col-jobs"><%= g.start_date.strftime("%Y") %></div>
             <%= image_tag(sticker_srt(g), class: 'sticker') %>
