@@ -6,8 +6,8 @@ module ApplicationHelper
     ''
   end
 
-  def scroll_class?(test_path)
-    return 'scrolled' if request.path == test_path
+  def white_color_font(test_path)
+    return 'white-color-font' if request.path == test_path
     ''
   end
 

@@ -1,18 +1,18 @@
-<nav id="nav-bar" class="<%=scroll_class?(root_path)%>" data-controller="scroll" data-scroll-target="navbar">
+<nav id="nav-bar" data-controller="scroll" data-scroll-target="navbar">
   <%= link_to root_path, id: 'logo' do %>
-    <div class="logo-letters">Rolf Sommer &nbsp</div>
+    <div class="logo-letters <%=white_color_font(root_path)%>">Rolf Sommer &nbsp</div>
     <%= image_tag('sun_icon.png', id: "sun-logo") %>
   <% end %>
 
   <div class="main-menu" data-controller="magnetic-elements">
     <%= link_to work_path, class: current_class?(work_path) do %>
-      <button magnetic-element data-action="mouseover->magnetic-elements#magnet">Produktionen</button>
+      <button class="<%=white_color_font(root_path)%>" magnetic-element data-action="mouseover->magnetic-elements#magnet">Produktionen</button>
     <% end %>
     <%= link_to steckbrief_path, class: current_class?(steckbrief_path) do %>
-      <button magnetic-element data-action="mouseover->magnetic-elements#magnet">Steckbrief</button>
+      <button class="<%=white_color_font(root_path)%>" magnetic-element data-action="mouseover->magnetic-elements#magnet">Steckbrief</button>
     <% end %>
     <%= link_to kontakt_path, class: current_class?(kontakt_path) do %>
-      <button magnetic-element data-action="mouseover->magnetic-elements#magnet">Kontakt</button>
+      <button class="<%=white_color_font(root_path)%>" magnetic-element data-action="mouseover->magnetic-elements#magnet">Kontakt</button>
     <% end %>
   </div>
 

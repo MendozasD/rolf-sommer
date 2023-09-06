@@ -19,9 +19,10 @@
       white-space: nowrap;
       font-size: 2rem;
       color: black;
-      a {
-        color: black;
-      }
+    }
+    .white-color-font {
+      color: white;
+      mix-blend-mode: difference;
     }
     #sun-logo {
       display: block;
@@ -48,7 +49,7 @@
       &:hover {
         &::before {
           content: "";
-          background-color: black;
+          background: black;
           border-radius: 50%;
           position: absolute;
           width: 7px;
@@ -57,6 +58,10 @@
           bottom: 0;
         }
       }
+    }
+    .white-color-font {
+      color: white;
+      mix-blend-mode: difference;
     }
     .active {
       text-decoration: none;
