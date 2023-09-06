@@ -2,17 +2,16 @@
   margin-bottom: 50px;
 }
 
-.kommende-card {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+#past-jobs-cards-wrapper {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
   .listing-jobs {
     position: relative;
     border: solid 0.5px gray;
     border-radius: 20px;
-    min-width: 300px;
-    padding: 20px;
-    margin: 20px;
+    padding: 5px 10px;
+    margin: 10px;
     .stuck-col-jobs {
       font-family: $logo-font-light;
       font-size: 2rem;
@@ -26,6 +25,8 @@
       }
     }
     .sticker {
+      transform: rotate(0) scale(1);
+      transition: transform ease 0.5s;
       position: absolute;
       right: 10px;
       bottom: 10px;
@@ -43,7 +44,7 @@
   }
   .listing-jobs:hover,
   .listing-jobs:focus {
-    svg {
+    img {
       filter: url(#shadow);
       transform: rotate(-20deg) scale(1.5);
       transition: transform ease 0.5s;
@@ -52,27 +53,27 @@
 }
 
 @media (max-width: 800px) {
-  #title-row-jobs {
-    display: none;
-  }
-  .listing-jobs {
-    flex-wrap: wrap;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 20px;
-    border: solid 0.3px gray;
-    .no-show-mobile {
-      display: none;
-    }
-    .stuck-col-jobs,
-    .role-col-jobs {
-      width: 100%;
-      text-align: center;
-    }
+  #past-jobs-cards-wrapper {
+    grid-template-columns: 1fr;
+    .listing-jobs {
+      flex-wrap: wrap;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 20px;
+      border: solid 0.3px gray;
+      .no-show-mobile {
+        display: none;
+      }
+      .stuck-col-jobs,
+      .role-col-jobs {
+        width: 100%;
+        text-align: center;
+      }
 
-    .datum-col-jobs,
-    .spielort-col-jobs {
-      margin: 0 auto;
+      .datum-col-jobs,
+      .spielort-col-jobs {
+        margin: 0 auto;
+      }
     }
   }
 }

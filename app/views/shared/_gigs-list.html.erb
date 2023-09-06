@@ -1,3 +1,5 @@
+<%# I18n TRANSLATES THE DATES TO GERMAN %>
+<% I18n.with_locale(:de) do %>
   <div class="jobs-filter" data-controller="filter border">
     <section class="job-button-filter">
       <button id="btn-all" class="btn-border-off" data-action="click->filter#showAll click->border#all" data-border-target="button">Alles</button>
@@ -6,7 +8,7 @@
       <button id="btn-texter" class="btn-border-off" data-action="click->filter#showTexter click->border#texter" data-border-target="button">Texter</button>
     </section>
 
-    <div class="kommende-card">
+    <div id="past-jobs-cards-wrapper">
       <%# Rendering the list of gigs with their filtering buttons %>
       <% @gig.where(premiered: true).order(start_date: :desc).each do |g| %>
         <% if g.actor %>
@@ -33,3 +35,5 @@
         <% end %>
       <% end %>
     </div>
+  </div>
+<% end %>
