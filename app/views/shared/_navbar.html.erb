@@ -6,7 +6,7 @@
 
   <div class="main-menu" data-controller="magnetic-elements">
     <%= link_to work_path, class: current_class?(work_path) do %>
-      <button magnetic-element data-action="mouseover->magnetic-elements#magnet">Work</button>
+      <button magnetic-element data-action="mouseover->magnetic-elements#magnet">Produktionen</button>
     <% end %>
     <%= link_to steckbrief_path, class: current_class?(steckbrief_path) do %>
       <button magnetic-element data-action="mouseover->magnetic-elements#magnet">Steckbrief</button>
@@ -21,7 +21,7 @@
       <div id="menu-list" class="animate__animated animate__slideInDown" hidden>
       <%# DROPDOWN MENU LIST %>
       <%= link_to "Startseite", root_path, class: 'link-menu-dropdown', id: id_link_dropdown(root_path) %>
-      <%= link_to "Work", work_path, class: 'link-menu-dropdown', id: id_link_dropdown(work_path) %>
+      <%= link_to "Produktionen", work_path, class: 'link-menu-dropdown', id: id_link_dropdown(work_path) %>
       <%= link_to "Steckbrief", steckbrief_path, class: 'link-menu-dropdown', id: id_link_dropdown(steckbrief_path) %>
       <%= link_to "Kontakt", kontakt_path, class: 'link-menu-dropdown', id: id_link_dropdown(kontakt_path) %>
       <%# CLOSIN BUTTON %>
