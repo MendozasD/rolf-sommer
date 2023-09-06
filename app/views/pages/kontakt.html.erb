@@ -1,20 +1,17 @@
 <div id="kontakt-container" class="box">
-  <div id="kontakt-foto-container">
-    <%= image_tag('photos/finale_kari-8.jpg', id: 'kontakt-foto-container') %>
-  </div>
-  <div id="link-kontakt-container">
-    <%= mail_to 'info@rolfsommer.net', 'Kontaktiere mich!', id: "kontakt-me-bttn", target: '_blank' %>
-    <div id="icons-kontakt">
-      <%= link_to "https://www.facebook.com/rolf.sommer.94", target: '_blank' do %>
-        <%= image_tag("icon-f.png", class: 'icon-kontakt') %>
-      <% end %>
-      <%= link_to "https://www.instagram.com/rolf_sommer_/", target: '_blank' do %>
-        <%= image_tag("icon-i.png", class: 'icon-kontakt') %>
-      <% end %>
+  <div id="kontakt-btns">
+    <div class="text-deco" id="kontakt-me-bttn">
+      <%= mail_to 'info@rolfsommer.net', '@ Kontaktiere mich!', target: '_blank' %>
     </div>
+    <%= link_to "https://www.facebook.com/rolf.sommer.94", target: '_blank' do %>
+      <div class="text-deco icon-deco"><%= image_tag("icon-f.png") %></div>
+    <% end %>
+    <%= link_to "https://www.instagram.com/rolf_sommer_/", target: '_blank' do %>
+      <div class="text-deco icon-deco"><%= image_tag("icon-i.png") %></div>
+    <% end %>
   </div>
-  <div id="link-box-bottom">
-    <%= link_to 'Web Design :: David Mendoza', 'http://davidmendoza.ch/', class: 'link-1', target: '_blank'%>
-    <%= link_to 'Fotograf :: Jon Trachsel', 'https://jontrachsel.ch/', class: 'link-1', target: '_blank'%>
-  </div>
+  <footer id="bottom-links">
+    <%= link_to 'Web Design: David Mendoza', 'http://davidmendoza.ch/', class: 'link-1', target: '_blank'%>
+    <%= link_to 'Fotograf: Jon Trachsel', 'https://jontrachsel.ch/', class: 'link-1', target: '_blank'%>
+  </footer>
 </div>
