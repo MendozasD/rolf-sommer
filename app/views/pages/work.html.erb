@@ -1,14 +1,17 @@
-<section class="box">
-  <%# KOMMENDE CARD %>
-  <h1 class="title-work">Kommende Shows</h1>
-  <%= render 'shared/kommende' %>
+<%# I18n TRANSLATES THE DATES TO GERMAN %>
+<% I18n.with_locale(:de) do %>
+  <section class="box">
+    <%# KOMMENDE CARD %>
+    <h1 class="title-work">Kommende Shows</h1>
+    <%= render 'shared/kommende' %>
 
-  <%# JOBS CARD %>
-  <h1 class="title-work">Vergangene Shows</h1>
-  <%= render 'shared/gigs-list' %>
-  </div>
+    <%# JOBS CARD %>
+    <h1 class="title-work">Vergangene Shows</h1>
+    <%= render 'shared/gigs-list' %>
+    </div>
 
-</section>
+  </section>
 
-<%# Footer, sticker guide %>
-<%= render 'shared/sticker-guide-footer'%>
+  <%# Footer, sticker guide %>
+  <%= render 'shared/sticker-guide-footer'%>
+<% end %>
