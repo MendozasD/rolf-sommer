@@ -41,7 +41,7 @@
       list-style-type: none;
       font-family: $body;
       font-size: 1rem;
-      font-weight: 300;
+      font-weight: 500;
       margin: 0 0.5rem;
       padding: 10px 15px;
       background: none;
@@ -60,7 +60,16 @@
       }
     }
     .white-color-font {
-      color: white;
+      color: black;
+      mix-blend-mode: multiply;
+      // border: solid 1px black;
+      border-radius: 50px;
+      background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0) 57%,
+        rgba(255, 255, 255, 1) 100%
+      );
+
       mix-blend-mode: difference;
     }
     .active {
@@ -111,6 +120,7 @@
       display: inline;
       .sun-menu {
         height: 35px;
+        animation: rotate 12s linear infinite;
       }
       #menu-list {
         z-index: -1;

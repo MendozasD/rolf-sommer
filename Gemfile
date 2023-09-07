@@ -7,6 +7,8 @@ gem "cloudinary"
 gem "devise"
 gem 'actionmailer', '~> 7.0', '>= 7.0.5'
 gem 'rails_admin', '~> 3.1', '>= 3.1.2'
+gem 'nokogiri', '~> 1.15', '>= 1.15.4'
+gem 'inline_svg'
 
 # Changed from sglite3 to pg to deploy [https://devcenter.heroku.com/articles/sqlite3]
 gem "pg"

@@ -5,12 +5,6 @@
   height: calc(100vh - 70px);
   margin-top: 70px;
   align-items: center;
-  background: linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0.6068802521008403) 0%,
-    rgba(0, 0, 0, 0.03545168067226889) 100%
-  );
-
   #profile-list {
     display: flex;
     font-family: $logo-font-dark;
@@ -21,12 +15,11 @@
     margin-top: 20px;
   }
   #greeting-home {
+    font-family: $logo-font-light;
     width: 80%;
-    line-height: 1;
     color: white;
     padding: 0 20px;
     font-size: 1.3rem;
-    columns: 2;
     font-weight: 300;
     span {
       text-decoration: underline orange 2px;
@@ -51,9 +44,9 @@
       align-self: center;
       padding: 0;
       font-size: 1.1rem;
-      columns: 1;
       margin-bottom: 50px;
       padding: 0 10px;
+      line-height: 1;
     }
   }
 }
