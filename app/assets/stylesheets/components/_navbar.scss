@@ -118,9 +118,8 @@
     }
     #dropdown-menu {
       display: inline;
-      .sun-menu {
+      #sun-menu {
         height: 35px;
-        animation: rotate 12s linear infinite;
       }
       #menu-list {
         z-index: -1;
