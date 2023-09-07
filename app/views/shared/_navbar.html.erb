@@ -1,7 +1,7 @@
 <nav id="nav-bar" data-controller="scroll" data-scroll-target="navbar">
   <%= link_to root_path, id: 'logo' do %>
     <div class="logo-letters <%=white_color_font(root_path)%>">Rolf Sommer &nbsp</div>
-    <%= image_tag('sun_icon.png', id: "sun-logo") %>
+    <%= image_tag('png/sun_icon.png', id: "sun-logo") %>
   <% end %>
 
   <div class="main-menu" data-controller="magnetic-elements">
@@ -18,7 +18,7 @@
 
   <div id="dropdown-menu" data-controller="dropdown">
     <div data-action="click->dropdown#showMenu" data-dropdown-target="showMenu">
-      <%= image_tag('sun-menu-stripes.png', id: 'sun-menu') %>
+      <%= image_tag('png/sun-menu-stripes.png', id: 'sun-menu') %>
     </div>
       <div id="menu-list" class="animate__animated animate__slideInDown" hidden>
       <%# DROPDOWN MENU LIST %>
