@@ -2,22 +2,25 @@
 // Run that command whenever you add a new controller or create them with
 // ./bin/rails generate stimulus controllerName
 
-import { application } from "./application";
+import { application } from "./application"
 
-import BorderController from "./border_controller";
-application.register("border", BorderController);
+import BannerController from "./banner_controller"
+application.register("banner", BannerController)
 
-import DropdownController from "./dropdown_controller";
-application.register("dropdown", DropdownController);
+import BorderController from "./border_controller"
+application.register("border", BorderController)
 
-import FilterController from "./filter_controller";
-application.register("filter", FilterController);
+import DropdownController from "./dropdown_controller"
+application.register("dropdown", DropdownController)
 
-import MagneticElementsController from "./magnetic_elements_controller";
-application.register("magnetic-elements", MagneticElementsController);
+import FilterController from "./filter_controller"
+application.register("filter", FilterController)
 
-import ScrollController from "./scroll_controller";
-application.register("scroll", ScrollController);
+import MagneticElementsController from "./magnetic_elements_controller"
+application.register("magnetic-elements", MagneticElementsController)
 
-import VanillaTiltController from "./vanilla_tilt_controller";
-application.register("vanilla-tilt", VanillaTiltController);
+import ScrollController from "./scroll_controller"
+application.register("scroll", ScrollController)
+
+import VanillaTiltController from "./vanilla_tilt_controller"
+application.register("vanilla-tilt", VanillaTiltController)

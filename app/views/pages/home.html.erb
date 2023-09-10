@@ -3,4 +3,7 @@
   <p id="greeting-home">
     <span>Guten Tag!</span> Seit bald zwanzig Jahren bewege ich mich unentwegt als Schauspieler und Regisseur durch die Schweizer Theater- und Musicallandschaft – mit einigen Abstechern auch nach Deutschland. Ausserdem schreibe und übersetze ich Theater- und Liedtexte. Ich lebe in Zürich, bin aber viel unterwegs, vor allem auch im Kanton Uri, wo ich aufgewachsen bin. Ich freue mich darauf, Sie kennenzulernen!
   </p>
+  <% if @visible.visibility %>
+    <%= render 'shared/banner' %>
+  <% end %>
 </div>

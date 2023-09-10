@@ -1,0 +1,29 @@
+<section id="banner" data-controller="banner" data-banner-target="banner" data-action="mouseover->banner#pausedAnimation mouseout->banner#runAnimation">
+  <div class="banner-entry-first" data-banner-target="linkFirst">
+    <% @banner.each do |b| %>
+        <%= link_to(b.url, target: '_blank') do %>
+          <span class="banner-entry-margin">
+            <%= b.content %>
+          </span>
+        <% end %>
+    <% end %>
+  </div>
+  <div class="banner-entry-middle" data-banner-target="linkMiddle">
+    <% @banner.each do |b| %>
+        <%= link_to(b.url, target: '_blank') do %>
+          <span class="banner-entry-margin">
+            <%= b.content %>
+          </span>
+        <% end %>
+    <% end %>
+  </div>
+  <div class="banner-entry-last" data-banner-target="linkLast">
+    <% @banner.each do |b| %>
+        <%= link_to(b.url, target: '_blank') do %>
+          <span class="banner-entry-margin">
+            <%= b.content %>
+          </span>
+        <% end %>
+    <% end %>
+  </div>
+</section>

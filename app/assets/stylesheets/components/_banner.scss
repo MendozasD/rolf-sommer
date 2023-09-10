@@ -1,0 +1,37 @@
+#banner {
+  display: flex;
+  background-color: $orange;
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  overflow: hidden;
+  .banner-entry-first,
+  .banner-entry-middle,
+  .banner-entry-last {
+    // MARQUEE/SCROLL ANIMATION
+    animation: scroll 15s linear infinite;
+    width: fit-content;
+    white-space: nowrap;
+    a {
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .banner-entry-margin {
+      font-size: 1.5rem;
+      font-family: $logo-font-light;
+      margin: 0 20px;
+      color: black;
+    }
+  }
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
