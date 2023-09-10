@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.0.0"
+ruby "3.0.3"
 gem "dotenv-rails", groups: [:development, :test]
 gem "cloudinary"
 gem "devise"
@@ -73,5 +73,5 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
-  gem "webdrivers"
+  gem "webdrivers", "= 5.3.0"
 end
