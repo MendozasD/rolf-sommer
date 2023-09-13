@@ -1,10 +1,11 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.0.3"
+ruby "3.0.0"
 gem "dotenv-rails", groups: [:development, :test]
 gem "cloudinary"
 gem "devise"
+gem 'font-awesome-rails'
 gem 'actionmailer', '~> 7.0', '>= 7.0.5'
 gem 'rails_admin', '~> 3.1', '>= 3.1.2'
 
@@ -15,7 +16,7 @@ gem "pg"
 gem "rails", "~> 7.0.5"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
-gem "sprockets-rails"
+# gem "sprockets-rails"
 
 # Use sqlite3 as the database for Active Record
 # gem "sqlite3", "~> 1.4"
@@ -51,7 +52,7 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 
 # Use Sass to process CSS
-gem "sassc-rails"
+# gem 'sass-rails', '~> 6.0'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
