@@ -6,7 +6,7 @@ gem "dotenv-rails", groups: [:development, :test]
 gem "cloudinary"
 gem "devise"
 gem 'actionmailer', '~> 7.0', '>= 7.0.5'
-gem 'rails_admin', '~> 3.1', '>= 3.1.2'
+gem 'rails_admin', '~> 3.0'
 
 # Changed from sglite3 to pg to deploy [https://devcenter.heroku.com/articles/sqlite3]
 gem "pg"
@@ -75,3 +75,5 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers", "= 5.3.0"
 end
+gem "cssbundling-rails"
+gem "cssbundling-rails"
