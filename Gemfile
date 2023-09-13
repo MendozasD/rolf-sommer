@@ -6,7 +6,7 @@ gem "dotenv-rails", groups: [:development, :test]
 gem "cloudinary"
 gem "devise"
 gem 'actionmailer', '~> 7.0', '>= 7.0.5'
-gem "rails_admin", "3.0"
+gem 'rails_admin', '~> 3.1', '>= 3.1.2'
 
 # Changed from sglite3 to pg to deploy [https://devcenter.heroku.com/articles/sqlite3]
 gem "pg"
