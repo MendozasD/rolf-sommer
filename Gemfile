@@ -7,6 +7,7 @@ gem "cloudinary"
 gem "devise"
 gem 'font-awesome-rails'
 gem 'actionmailer', '~> 7.0', '>= 7.0.5'
+gem 'bootstrap', '~> 5.3.1'
 gem 'rails_admin', '~> 3.1', '>= 3.1.2'
 
 # Changed from sglite3 to pg to deploy [https://devcenter.heroku.com/articles/sqlite3]
@@ -76,3 +77,4 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers", "= 5.3.0"
 end
+gem "cssbundling-rails"
