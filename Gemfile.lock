@@ -51,10 +51,6 @@ GEM
       globalid (>= 0.3.6)
     activemodel (7.0.7.2)
       activesupport (= 7.0.7.2)
-    activemodel-serializers-xml (1.0.2)
-      activemodel (> 5.x)
-      activesupport (> 5.x)
-      builder (~> 3.1)
     activerecord (7.0.7.2)
       activemodel (= 7.0.7.2)
       activesupport (= 7.0.7.2)
@@ -128,18 +124,6 @@ GEM
       activesupport (>= 5.0.0)
     jsbundling-rails (1.1.2)
       railties (>= 6.0.0)
-    kaminari (1.2.2)
-      activesupport (>= 4.1.0)
-      kaminari-actionview (= 1.2.2)
-      kaminari-activerecord (= 1.2.2)
-      kaminari-core (= 1.2.2)
-    kaminari-actionview (1.2.2)
-      actionview
-      kaminari-core (= 1.2.2)
-    kaminari-activerecord (1.2.2)
-      activerecord
-      kaminari-core (= 1.2.2)
-    kaminari-core (1.2.2)
     loofah (2.21.3)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -157,7 +141,6 @@ GEM
     mini_mime (1.1.5)
     minitest (5.20.0)
     msgpack (1.7.2)
-    nested_form (0.3.2)
     net-imap (0.3.7)
       date
       net-protocol
@@ -205,12 +188,6 @@ GEM
     rails-html-sanitizer (1.6.0)
       loofah (~> 2.21)
       nokogiri (~> 1.14)
-    rails_admin (3.1.2)
-      activemodel-serializers-xml (>= 1.0)
-      kaminari (>= 0.14, < 2.0)
-      nested_form (~> 0.3)
-      rails (>= 6.0, < 8)
-      turbo-rails (~> 1.0)
     railties (7.0.7.2)
       actionpack (= 7.0.7.2)
       activesupport (= 7.0.7.2)
@@ -279,6 +256,8 @@ GEM
       nokogiri (~> 1.6)
       rubyzip (>= 1.3.0)
       selenium-webdriver (~> 4.0, < 4.11)
+    webpack-rails (0.9.11)
+      railties (>= 3.2.0)
     websocket (1.2.9)
     websocket-driver (0.7.6)
       websocket-extensions (>= 0.1.0)
@@ -305,18 +284,17 @@ DEPENDENCIES
   pg
   puma (~> 5.0)
   rails (~> 7.0.5)
-  rails_admin (~> 3.0)
   sassc-rails
   selenium-webdriver
-  sprockets (~> 4.2, >= 4.2.1)
   stimulus-rails
   turbo-rails
   tzinfo-data
   web-console
   webdrivers
+  webpack-rails (~> 0.9.11)
 
 RUBY VERSION
-   ruby 3.0.0p0
+   ruby 3.0.3p157
 
 BUNDLED WITH
    2.3.22
