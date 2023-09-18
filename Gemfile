@@ -1,26 +1,13 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-<<<<<<< HEAD
-ruby "3.0.3"
-
-gem 'rails', '~> 7.0'
-=======
 ruby "3.0.0"
->>>>>>> 3857504f5c7aebc4809b6e466090d12734438e22
 gem "dotenv-rails", groups: [:development, :test]
 gem "devise"
-<<<<<<< HEAD
-gem 'webpacker', '~> 5.x'
-
-# gem "cloudinary"
-# gem 'actionmailer', '~> 7.0', '>= 7.0.5'
-=======
 gem 'font-awesome-rails'
 gem 'actionmailer', '~> 7.0', '>= 7.0.5'
 gem 'bootstrap', '~> 5.3.1'
 gem 'rails_admin', '~> 3.1', '>= 3.1.2'
->>>>>>> 3857504f5c7aebc4809b6e466090d12734438e22
 
 # Changed from sglite3 to pg to deploy [https://devcenter.heroku.com/articles/sqlite3]
 gem "pg"
@@ -62,11 +49,7 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 
 # Use Sass to process CSS
-<<<<<<< HEAD
-# gem "sassc-rails"
-=======
 gem 'sass-rails', '>= 5'
->>>>>>> 3857504f5c7aebc4809b6e466090d12734438e22
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
